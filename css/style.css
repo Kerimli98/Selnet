@@ -1130,11 +1130,6 @@ a {
     transition: all 0.3s;
 }
 
-@media screen and (max-width: 400px) {
-    .tab_div {
-        display: none;
-    }
-}
 
 .icon {
     margin-right: 1.071rem;
@@ -1440,6 +1435,11 @@ input[type=submit]:hover {
 /*  */
 /*  */
 /******************* RESPONSIVE DESIGN ************************/
+@media screen and (max-width: 400px) {
+    .tab_div {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 1320px) {
     html {
