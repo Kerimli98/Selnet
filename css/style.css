@@ -21,10 +21,9 @@
     /* header starts */
     
     .header {
-        background-image: url(../img/selnet-4.png);
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
+        /* use quotes with url (change everywhere), for example url('../img/selnet-4.png') */
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) ,url(../img/selnet-4.png) no-repeat fixed center;
+        /* you can use linear gradient to set background opacity instead of .opacity class */
         background-size: cover;
         height: 100vh;
     }
@@ -40,12 +39,17 @@
     }
     
     .opacity {
-        background-color: rgba(0, 0, 0, 0.4);
+        /*background-color: rgba(0, 0, 0, 0.4);*/
         height: 100vh;
     }
     
     .navbar {
         max-width: 82.142rem;
+        /* setting max width on every class isn't practical, imagine if tomorrow you need to change max width, then you will have to change everywhere, try to create .container class instead, where you will have max width property
+         see this:
+         https://css-tricks.com/best-way-implement-wrapper-css/
+         */
+        /* */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -174,6 +178,7 @@
     .dd-c {
         position: absolute;
         background: white;
+        /*top: 30px;*/ /* consider addidng top property */
         height: auto;
         width: 100%;
         transform: scaleY(0);
@@ -285,6 +290,10 @@
     }
     
     .showcase {
+        /* This kind of behaviour isn't recommended because it has content, it has height and width, but its parent doesn't , see photo
+        https://ibb.co/4J2bZpB
+        https://ibb.co/nQRvDtM
+        */
         font-weight: 400;
         line-height: 1.4;
     }
@@ -409,7 +418,13 @@
     }
     
     .clients-row {
+        /* This is not a good practise, to have this kind of rows, because imagine how would backend parse data here. They wouldn't like to divide content into 4 block elements, they would rather send the whole bunch of data at once
+         https://ibb.co/Fw2bmYP
+         */
         display: none;
+    /*     For this case i would recommend display grid, it would be easier to place elements, and you won't need that kind of rows, even if you want to stick with flex, then you should see flex wrap property
+     https://css-tricks.com/snippets/css/complete-guide-grid/
+     */
     }
     
     .row-container {
@@ -429,6 +444,7 @@
         margin-left: 2.357rem;
         margin-top: 2.142rem;
         border: 0.071rem solid var(--border-color-gray);
+    /*    See comments for online section, this way you wouldn't need seperate class for each of the partners*/
     }
     
     .client-card img {
@@ -440,7 +456,9 @@
         -webkit-transform: scale(1.08);
         transform: scale(1.08);
     }
-    
+
+    /*extra classes begin*/
+
     .alma-store-logo {
         width: 14.214rem;
         height: 14.214rem;
@@ -518,7 +536,10 @@
         width: 14.642rem;
         height: 4.285rem;
     }
-    
+
+    /*extra classes end*/
+
+
     .load-btn {
         background-color: var(--yellow);
         color: white;
@@ -558,15 +579,18 @@
     
     .payments-bg {
         background-image: url(../img/nasa\ bg.jpg);
+        /*You can use same trick with opacity here*/
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         height: 72vh;
+        /* I wouldn't recommed usage of height generally, especially with vh, there are several problems like overflow of content, try paddings instead */
         position: relative;
     }
     
     .opacity-payment {
+        /*extra*/
         height: 72vh;
         background-color: rgba(0, 0, 0, 0.4);
     }
@@ -593,6 +617,13 @@
     .payment {
         width: 16.785rem;
         height: 7.714rem;
+
+        /*Here is why, i recommend usage of padding instead of fixed height*/
+        /*https://ibb.co/xzC5kT5*/
+        /*if you want to have all of that boxes to be the same size try the following, add the following */
+        /*padding: 1rem;*/
+        /*box-sizing: border-box;*/
+
         border-radius: 0.5rem;
         display: flex;
         justify-content: center;
@@ -602,7 +633,22 @@
         margin-top: 1.785rem;
         transition: 0.3s;
     }
-    
+
+    /*it's also about having same size boxes, and not overflowed content*/
+    /*.payment-logo {*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*    object-fit: contain;*/
+    /*}*/
+
+    /* try first child property in order to remove extra margins where it's not required */
+    /*like below*/
+
+    /*.payment:first-child {*/
+    /*    margin-left: 0;*/
+    /*}*/
+
+
     .payment:hover {
         transform: translate(0, -0.9rem);
     }
@@ -644,6 +690,9 @@
     }
     
     .read-more {
+        /* the same situation here, even though read more is inside of <a> tag, <a> tag doesnt have height,
+        button tag inside of a, isn't recommended, better to have span
+        */
         position: absolute;
         color: white;
         top: 76%;
