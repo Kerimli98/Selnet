@@ -1,1601 +1,707 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
-
-:root {
-    --yellow: #FCA137;
-    --blue: #2b5f8e;
-    --light-gray: #5F6773;
-    --border-color-gray: #D5DDE4;
-    --violet: #F6F8FE;
-    --footer-gray: #1f1f1f;
-    --footer-blue: #041431;
-    --footer-light-gray: #3a3737;
-    --dark-white: #bbb;
-}
-
-html {
-    font-size: 14px;
-}
-
-body {
-    font-family: 'Lato', sans-serif;
-}
-
-/* header starts */
-
-.header {
-    background-image: url(../img/selnet-4.png);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-
-.selnet-logo {
-    height: auto;
-    max-width: 14.214rem;
-}
-
-.logo {
-    flex: 1;
-    padding-top: 1rem;
-}
-
-.opacity {
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 100vh;
-}
-
-.navbar {
-    max-width: 82.142rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.navbar-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navBar {
-    position: fixed;
-    top: 0px;
-    height: 14vh;
-    width: 100%;
-    background-color: var(--footer-blue);
-}
-
-.fixed-nav {
-    max-width: 82.142rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.navBar-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.nav-active {
-    transform: translateX(0%);
-}
-.list-item-link {
-    font-weight: 500;
-    color: white;
-    margin-left: 2.4rem;
-    text-decoration: none;
-    font-size: 1.428rem;
-    letter-spacing: 0.071rem;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    transition: all 0.4s;
-}
-
-.list-item-link:hover,
-.list-item-link:focus {
-    color: var(--yellow);
-}
-
-.lang-container {
-    height: 100%;
-    max-width: 100%;
-    margin-left: 2.5rem;
-}
-
-.Selnet-logo {
-    height: auto;
-    max-width: 14.214rem;
-}
-
-.dropdown {
-    z-index: 1;
-    position: relative;
-}
-
-.caret {
-    color: white;
-    margin-left: 0.571rem;
-}
-
-.dd-a {
-    position: relative;
-    padding-left: 0.714rem;
-    font-size: 1.428rem;
-    transition-duration: 0.3s;
-    -webkit-transition-duration: 0.3s;
-}
-
-.dropdown input:after {
-    content: "";
-    width: 100%;
-    height: 0.142rem;
-    position: absolute;
-    background: var(--yellow);
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: bottom left;
-    transition-duration: 0.3s;
-    -webkit-transform: scaleX(0);
-    -webkit-transform-origin: bottom left;
-    -webkit-transition-duration: 0.3s;
-}
-
-.dropdown input {
-    top: 0;
-    opacity: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-.dropdown input:hover {
-    cursor: pointer;
-}
-
-.dropdown input:checked:after {
-    transform: scaleX(1);
-    -webkit-transform: scaleX(1);
-}
-
-.dropdown input:checked ~ .dd-c {
-    transform: scaleY(1);
-    -webkit-transform: scaleY(1);
-}
-
-.dd-a span {
-    color: white;
-}
-
-.dd-c {
-    position: absolute;
-    background: white;
-    height: auto;
-    width: 100%;
-    transform: scaleY(0);
-    transform-origin: top left;
-    transition-duration: 0.2s;
-    -webkit-transform: scaleY(0);
-    -webkit-transform-origin: top left;
-    -webkit-transition-duration: 0.2s;
-}
-
-.dd-c ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.dd-c li {
-    white-space: nowrap;
-    display: block;
-    position: relative;
-}
-
-.dd-link {
-    display: block;
-    position: relative;
-    text-decoration: none;
-    padding: 0.357rem;
-    background: white;
-    color: black;
-}
-
-.dd-link:before {
-    z-index: 0;
-    content: "";
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    transform-origin: top left;
-    -webkit-transform-origin: top left;
-    background: var(--yellow);
-    top: 0;
-    left: 0;
-    transform: scaleX(0);
-    -webkit-transform: scaleX(0);
-}
-
-.dd-link span {
-    display: block;
-    position: relative;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-}
-
-.dd-link:hover:before {
-    transform: scaleX(1);
-    -webkit-transform: scaleX(1);
-}
-
-.dd-link:hover span {
-    color: white;
-}
-
-.flag-img {
-    width: 1.828rem;
-    height: 1.828rem;
-}
-
-.vertical-line {
-    border-left: 0.071rem solid var(--light-gray);
-    height: 2.142rem;
-    margin-left: 1.285rem;
-}
-
-.login-cont {
-    margin-left: 1.071rem;
-}
-
-.login-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-icon {
-    color: white;
-    margin-right: 0.714rem;
-}
-
-.login {
-    font-size: 1.428rem;
-    color: white;
-}
-
-.burger {
-    cursor: pointer;
-    display: none;
-}
-
-.burger div {
-    width: 1.785rem;
-    height: 0.214rem;
-    background-color: rgb(226, 226, 226);
-    margin: 0.357rem;
-    border-radius: 0.214rem;
-    transition: all 0.4s ease;
-}
-
-.showcase {
-    max-width: 82.142rem;
-    margin: 0 auto;
-    font-weight: 400;
-    line-height: 1.4;
-}
-
-.showcase-text {
-    color: white;
-    width: 42%;
-    position: absolute;
-    top: 26%;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
-}
-
-.yellow {
-    color: var(--yellow);
-    font-size: 1.45rem;
-}
-
-.main-text {
-    font-size: 3rem;
-    animation: fadeInBottom 1.5s ease-in-out;
-}
-
-.small-text {
-    font-weight: 500;
-    animation: fadeInBottom2 1.6s ease-in-out;
-    line-height: 1.5;
-}
-
-/* header ends */
-/* our services section starts */
-
-.our-services {
-    max-width: 82.142rem;
-    margin: 0 auto;
-    padding-bottom: 6.428rem;
-}
-
-.our-services-heading {
-    color: var(--blue);
-    font-weight: bold;
-    font-size: 2.6rem;
-    padding: 2.857rem 0;
-}
-
-.cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1.785rem;
-}
-
-.card {
-    width: 16.428rem;
-    height: 25rem;
-    border: 0.071rem solid #62AAEB;
-    border-radius: 1.071rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform .2s ease-in-out;
-}
-
-.card:hover {
-    -ms-transform: scale(1.03);
-    -webkit-transform: scale(1.03);
-    transform: scale(1.03);
-}
-
-.card-icon {
-    color: var(--yellow);
-    font-size: 4.5rem;
-    margin-top: 1.928rem;
-}
-
-.card:hover .card-icon {
-    color: var(--blue);
-}
-
-.card-name {
-    font-weight: 900;
-    color: #2C2C2C;
-    font-size: 1.714rem;
-    margin-top: 3.214rem;
-}
-
-.card-info {
-    color: var(--light-gray);
-    text-align: center;
-    margin-top: 1.928rem;
-    font-size: 1.214rem;
-    width: 80%;
-    line-height: 1.4;
-}
-
-/* our services section ends */
-/* Our clients section starts */
-
-.our-clients {
-    max-width: 100%;
-    background-color: var(--violet);
-}
-
-.clients-container {
-    max-width: 82.142rem;
-    margin: 0 auto;
-}
-
-.our-clients-heading {
-    color: var(--blue);
-    font-weight: bold;
-    font-size: 2.5rem;
-    padding: 3.214rem 0;
-}
-
-.clients-btn-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.clients-row {
-    display: none;
-}
-
-.row-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.client-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 18.214rem;
-    height: 12.142rem;
-    overflow: hidden;
-    background-color: white;
-    margin-left: 2.357rem;
-    margin-top: 2.142rem;
-    border: 0.071rem solid var(--border-color-gray);
-}
-
-.client-card img {
-    transition: transform 0.8s ease
-}
-
-.client-card:hover .card-logo {
-    -ms-transform: scale(1.08);
-    -webkit-transform: scale(1.08);
-    transform: scale(1.08);
-}
-
-.alma-store-logo {
-    width: 14.214rem;
-    height: 14.214rem;
-}
-
-.araz-logo,
-.miniso-logo {
-    width: 9.642rem;
-    height: 9.642rem;
-}
-
-.azerimed-logo,
-.naxcivan-logo,
-.ekol-logo {
-    width: 15.714rem;
-    height: 15.714rem;
-}
-
-.azeriqaz-logo,
-.grant-logo,
-.ideal-logo,
-.nortwest-logo,
-.pasha-logo,
-.blueplanet-logo,
-.prive-logo {
-    width: 12.5rem;
-    height: 8.571rem;
-}
-
-.socar-logo,
-.polymart-logo,
-.papa-logo,
-.shok-logo {
-    width: 12.857rem;
-    height: 6.785rem;
-}
-
-.cofee-logo,
-.alliance-logo,
-.akkord-logo,
-.cinici-logo,
-.burger-logo,
-.dominos-logo,
-.mcdonalds-logo,
-.evrika-logo,
-.muxtaroglu-logo {
-    width: 11.357rem;
-    height: 11.357rem;
-}
-
-.efendi-logo {
-    width: 13.571rem;
-    height: 10rem;
-}
-
-.film-logo,
-.garant-logo,
-.global-logo,
-.qala-logo {
-    width: 12.285rem;
-    height: 10.357rem;
-}
-
-.mccan-logo,
-.selhome-logo,
-.shuttgart-logo,
-.technol-logo {
-    width: 10.714rem;
-    height: 10.714rem;
-}
-
-.transbroker-logo,
-.zire-logo,
-.master-logo {
-    width: 14.642rem;
-    height: 4.285rem;
-}
-
-.load-btn {
-    background-color: var(--yellow);
-    color: white;
-    margin-top: 3.571rem;
-    margin-bottom: 3.571rem;
-    font-size: 1.285rem;
-    border: none;
-    cursor: pointer;
-    padding: 1.571rem 4.285rem;
-    text-transform: uppercase;
-    letter-spacing: 0.107rem;
-    font-weight: 700;
-    outline: none;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    transition: all 0.4s;
-    border-radius: 3.571rem;
-    border: 0.214rem solid #fff;
-    overflow: hidden;
-}
-
-.load-icon {
-    color: white;
-}
-
-.load-btn:hover {
-    background-color: var(--blue);
-}
-
-.noContent {
-    color: #000 !important;
-    background-color: transparent !important;
-    pointer-events: none;
-}
-
-/* our clients ends here */
-/* online-payments starts */
-
-.payments-bg {
-    background-image: url(../img/nasa\ bg.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 72vh;
-    position: relative;
-}
-
-.opacity-payment {
-    height: 72vh;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.online-payments {
-    max-width: 82.142rem;
-    margin: 0 auto;
-}
-
-.payment-heading {
-    color: white;
-    font-weight: bold;
-    font-size: 2.5rem;
-    padding: 3.214rem 0 2.142rem 0;
-}
-
-.payment-methods {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.payment {
-    width: 16.785rem;
-    height: 7.714rem;
-    border-radius: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 2.142rem;
-    margin-top: 1.785rem;
-    transition: 0.3s;
-}
-
-.payment:hover {
-    transform: translate(0, -0.9rem);
-}
-
-.payments-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.emanat {
-    background-color: #ebebeb;
-}
-
-.hesab {
-    background-color: #00a9e4;
-}
-
-.million {
-    background-color: #d1010f;
-}
-
-.IBA {
-    background-color: #4b99de;
-}
-
-.birbank {
-    background-color: #b30838;
-}
-
-.payment-name {
-    font-size: 1.785rem;
-    font-weight: 600;
-    color: #232323;
-}
-
-a {
-    text-decoration: none;
-}
-
-.read-more {
-    position: absolute;
-    color: white;
-    top: 76%;
-    right: 5%;
-    font-size: 1.285rem;
-    border: none;
-    background: none;
-    cursor: pointer;
-    padding: 1.428rem 4.285rem;
-    text-transform: uppercase;
-    letter-spacing: 0.071rem;
-    font-weight: 700;
-    outline: none;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    transition: all 0.4s;
-    border-radius: 3.571rem;
-    border: 0.071rem solid #fff;
-    overflow: hidden;
-}
-
-.read-more:hover {
-    background-color: var(--yellow);
-}
-
-.icon-arrow-right {
-    margin-left: 1.071rem;
-}
-
-/* online payments ends here */
-/* Footer starts */
-
-.footer-bg {
-    background-color: var(--footer-blue);
-    clip-path: polygon(0% 13%, 15% 0%, 100% 10%, 100% 100%, 0% 100%);
-    height: 50vh;
-}
-
-.bg-light {
-    position: relative;
-    background-color: rgb(14, 39, 70);
-    height: 50vh;
-}
-
-.footer-container {
-    max-width: 82.142rem;
-    margin: 0 auto;
-    display: flex;
-    padding-top: 6.071rem;
-}
-
-.footer-text {
-    color: var(--dark-white);
-    line-height: 1.5;
-    letter-spacing: 0.078rem;
-    margin-top: 1.071rem;
-    width: 87%;
-}
-
-.footer-headings {
-    color: var(--dark-white);
-    font-size: 1.428rem;
-    font-weight: 700;
-}
-
-.bottom-logo {
-    display: flex;
-    flex-direction: column;
-}
-
-.bottom-nav-links {
-    display: flex;
-    flex-direction: column;
-    width: 22%
-}
-
-.contact {
-    display: flex;
-    flex-direction: column;
-}
-
-.num1,
-.num2,
-.email {
-    margin-top: 1.071rem;
-}
-
-.address {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact,
-.address {
-    margin-left: 3.214rem;
-}
-
-.address-text {
-    margin-top: 1.071rem;
-    letter-spacing: 0.078rem;
-    line-height: 1.5;
-}
-
-.address-text,
-.num1,
-.num2,
-.email {
-    color: #888;
-}
-
-.link {
-    color: #888;
-    margin-top: 1.071rem;
-}
-
-.link:hover {
-    color: var(--yellow);
-}
-
-/* footer ends here */
-/* Animations */
-
-@keyframes fadeInBottom {
-    from {
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+     :root {
+        --yellow: #FCA137;
+        --blue: #2b5f8e;
+        --light-gray: #5F6773;
+        --border-color-gray: #D5DDE4;
+        --violet: #F6F8FE;
+        --footer-gray: #1f1f1f;
+        --footer-blue: #0f1e31;
+        --footer-light-gray: #3a3737;
+        --dark-white: #bbb;
+    }
+    
+    html {
+        font-size: 14px;
+    }
+    
+    body {
+        font-family: 'Lato', sans-serif;
+    }
+    /* header starts */
+    
+    .header {
+        /* use quotes with url (change everywhere), for example url('../img/selnet-4.png') */
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) ,url(../img/selnet-4.png) no-repeat fixed center;
+        /* you can use linear gradient to set background opacity instead of .opacity class */
+        background-size: cover;
+        height: 100vh;
+    }
+    
+    .selnet-logo {
+        height: auto;
+        max-width: 14.214rem;
+    }
+    
+    .logo {
+        flex: 1;
+        padding-top: 1rem;
+    }
+    
+    .opacity {
+        /*background-color: rgba(0, 0, 0, 0.4);*/
+        height: 100vh;
+    }
+    
+    .navbar {
+        max-width: 82.142rem;
+        /* setting max width on every class isn't practical, imagine if tomorrow you need to change max width, then you will have to change everywhere, try to create .container class instead, where you will have max width property
+         see this:
+         https://css-tricks.com/best-way-implement-wrapper-css/
+         */
+        /* */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    .navbar-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .navBar {
+        position: fixed;
+        top: 0px;
+        height: 14vh;
+        width: 100%;
+        background-color: var(--footer-blue);
+    }
+    
+    .fixed-nav {
+        max-width: 82.142rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    .navBar-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .list-item-link {
+        font-weight: 500;
+        color: white;
+        margin-left: 2.4rem;
+        text-decoration: none;
+        font-size: 1.428rem;
+        letter-spacing: 0.071rem;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+    
+    .list-item-link:hover,
+    .list-item-link:focus {
+        color: var(--yellow);
+    }
+    
+    .lang-container {
+        height: 100%;
+        max-width: 100%;
+        margin-left: 2.5rem;
+    }
+    
+    .Selnet-logo {
+        height: auto;
+        max-width: 14.214rem;
+    }
+    
+    .dropdown {
+        z-index: 1;
+        position: relative;
+    }
+    
+    .caret {
+        color: white;
+        margin-left: 0.571rem;
+    }
+    
+    .dd-a {
+        position: relative;
+        padding-left: 0.714rem;
+        font-size: 1.428rem;
+        transition-duration: 0.3s;
+        -webkit-transition-duration: 0.3s;
+    }
+    
+    .dropdown input:after {
+        content: "";
+        width: 100%;
+        height: 0.142rem;
+        position: absolute;
+        background: var(--yellow);
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: bottom left;
+        transition-duration: 0.3s;
+        -webkit-transform: scaleX(0);
+        -webkit-transform-origin: bottom left;
+        -webkit-transition-duration: 0.3s;
+    }
+    
+    .dropdown input {
+        top: 0;
         opacity: 0;
-        transform: translateY(35%);
+        padding: 0;
+        margin: 0;
+        border: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
     }
-    to {
-        opacity: 1;
+    
+    .dropdown input:hover {
+        cursor: pointer;
     }
-}
-
-@keyframes fadeInBottom2 {
-    from {
-        opacity: 0;
-        transform: translateY(55%);
+    
+    .dropdown input:checked:after {
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
     }
-    to {
-        opacity: 1;
+    
+    .dropdown input:checked~.dd-c {
+        transform: scaleY(1);
+        -webkit-transform: scaleY(1);
     }
-}
-
-/* ________________________________________________________________________________________________________________________ */
-/* ----------------payment page-----------------------------  */
-
-.payment-header {
-    background-image: url(../img/nasa\ bg.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 130vh;
-}
-
-.payment-page-opacity {
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 130vh;
-}
-
-.text-below {
-    margin-top: 2.857rem
-}
-
-.below-payments {
-    width: 82.142rem;
-    margin: 0 auto;
-    padding-top: 4.285rem;
-}
-
-.payment-pic-container {
-    margin-top: 2.857rem;
-}
-
-.how-to-pay {
-    color: white;
-    font-size: 2.8rem;
-    font-weight: 600;
-    letter-spacing: 0.085rem;
-}
-
-.payment-pic {
-    width: 45%;
-    height: 40vh;
-    background-image: url(../img/payment-methods/paymentmethods.jpg);
-    border-radius: 0.571rem;
-    position: relative;
-}
-
-.text-body {
-    position: absolute;
-    left: 42%;
-    top: 38%;
-    width: 40%;
-    background-color: #0d3857;
-    height: 29vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.payment-text {
-    color: white;
-    font-size: 1.65rem;
-    width: 80%;
-    line-height: 1.4;
-}
-
-/*  payment page ends here*/
-/* _____________________________________________________________________________________________ */
-/*  */
-/*  */
-/* About us page starts here */
-
-#counter {
-    height: auto;
-    max-width: 82.142rem;
-    margin: 0 auto;
-}
-
-.counter-heading {
-    color: var(--blue);
-    font-size: 3.9rem;
-    font-weight: 600;
-    margin-top: 2.571rem;
-}
-
-.counter-big-counter {
-    display: flex;
-    flex-direction: column;
-}
-
-.counter-values {
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    margin-top: 3.214rem;
-    margin-bottom: 2.5rem;
-}
-
-.counter-value {
-    color: var(--yellow);
-    font-size: 3.43rem;
-    font-weight: 600;
-    margin-right: 16rem;
-}
-
-.regions {
-    position: absolute;
-    color: var(--yellow);
-    font-size: 2.285rem;
-    font-weight: 600;
-    left: 22%;
-    top: 15.5%;
-}
-
-.years {
-    position: absolute;
-    color: var(--yellow);
-    font-size: 2.285rem;
-    font-weight: 600;
-    left: 15%;
-    top: 15.5%;
-}
-
-.user {
-    position: absolute;
-    color: var(--yellow);
-    font-size: 2.285rem;
-    font-weight: 600;
-    right: 38%;
-    top: 15.5%;
-}
-
-.container-cc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.counter-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.experience,
-.districts,
-.users {
-    font-size: 1.142rem;
-    font-weight: 600;
-    word-spacing: 0.142rem;
-    color: var(--footer-gray);
-    margin-top: 0.714rem;
-}
-
-.districts {
-    margin-right: 1.928rem;
-}
-
-.users {
-    margin-right: 4.071rem;
-}
-
-.about-header {
-    background-image: url(../img/nasa\ bg.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    position: relative;
-}
-
-.about-opacity {
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 100vh;
-}
-
-.about-us-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2.142rem;
-    height: auto;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.6);
-}
-
-.second-container {
-    max-width: 82.142rem;
-    margin: 0 auto;
-}
-
-.About-heading,
-.our-mission-heading,
-.services-heading {
-    color: #2E4D7D;
-    font-weight: 700;
-    font-size: 2.428rem;
-    margin-top: 2.142rem;
-}
-
-.about-us,
-.our-mission {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.our-mission {
-    margin-bottom: 1.428rem;
-}
-
-.aboutus,
-.ourmission {
-    margin-top: 1.428rem;
-    color: var(--footer-blue);
-    text-align: center;
-    font-size: 1.571rem;
-    font-weight: 500;
-    line-height: 1.7;
-}
-
-.services-heading {
-    color: var(--blue);
-    padding-top: 3.571rem;
-    margin-bottom: 2.857rem;
-    font-size: 2.6rem;
-}
-
-.company-services {
-    max-width: 82.142rem;
-    margin: 0 auto;
-}
-
-.company-services-container {
-    background-color: var(--violet);
-}
-
-.service-cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 2.857rem;
-}
-
-.service-card-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 3.214rem;
-}
-
-.service-card {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    border: 0.071rem solid var(--border-color-gray);
-    color: var(--footer-gray);
-    width: 24.857rem;
-    height: 14.285rem;
-    border-radius: 0.5rem;
-    margin-left: 3.214rem;
-}
-
-.service-card {
-    transition: all 0.4s;
-    color: var(--blue);
-    font-size: 3.3rem;
-    transition: transform 0.4s ease-in-out;
-}
-
-.service-card:hover {
-    -ms-transform: scale(1.15);
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);
-    background-color: white;
-    color: var(--yellow);
-}
-
-.services-card-name {
-    font-weight: 700;
-    color: #2C2C2C;
-    font-size: 1.64rem;
-    margin-top: 2.5rem;
-}
-
-/* About us page ends here */
-/* --------------------------------------------------------------------------------- */
-/* FEES page starts */
-
-.page-header {
-    background-image: url(../img/nasa\ bg.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 120vh;
-    position: relative;
-}
-
-.page-opacity {
-    font-family: 'Lato', sans-serif;
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 120vh;
-    overflow: hidden;
-    position: relative;
-}
-
-.fiber-icon,
-.phone-icon,
-.tv-icon {
-    color: white;
-    font-size: 2rem;
-}
-
-.icon-download {
-    color: white;
-    font-size: 1.142rem;
-    margin-right: 0.571rem;
-}
-
-.download:hover .icon-download {
-    color: var(--yellow);
-    transition: all 0.3s;
-}
-
-.download:hover {
-    color: var(--yellow);
-    transition: all 0.3s;
-}
-
-
-.icon {
-    margin-right: 1.071rem;
-}
-
-.tab_div {
-    position: absolute;
-    top: 18%;
-    width: 100%;
-    transform: translateZ(0);
-}
-
-.tabs_menu {
-    width: 17%;
-    position: absolute;
-    left: 0;
-}
-
-ul.tabs {
-    padding: 0;
-}
-
-#tab1,
-#tab2,
-#tab3 {
-    padding-top: 10%;
-    padding-bottom: 10%;
-    padding-left: 5%;
-    padding-right: 1%;
-    width: 100%;
-}
-
-ul.tabs li {
-    list-style-type: none;
-    border-right: 0.142rem solid var(--yellow);
-    font-size: 1.5rem;
-    color: white;
-}
-
-#tab1_content,
-#tab2_content,
-#tab3_content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 55%;
-    padding: 2.142rem;
-    margin: 0 auto;
-    height: auto;
-    background-color: rgba(16, 56, 92, 0.7);
-}
-
-.title {
-    font-size: 2.6rem;
-    margin-bottom: 1.428rem;
-}
-
-.tab-details {
-    font-size: 1.5rem;
-    letter-spacing: 0.08rem;
-    line-height: 1.45;
-}
-
-.tab-ul {
-    list-style: disc;
-}
-
-.title,
-.tab-details {
-    color: rgb(227, 229, 233);
-}
-
-ul.tabs li {
-    display: inline-block;
-    position: relative;
-    padding: 1em;
-    cursor: pointer;
-    background: #17171e;
-    color: white;
-    z-index: 0;
-}
-
-ul.tabs li:before {
-    content: " ";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--yellow);
-    transform: scaleX(0);
-    transform-origin: 0 50%;
-    transition: transform .5s ease-out;
-}
-
-ul.tabs li:hover:before {
-    transform: scaleX(1);
-}
-
-table {
-    width: 100%;
-    margin-top: 3.571rem;
-}
-
-table,
-th,
-td {
-    border: 0.071rem solid white;
-    border-collapse: collapse;
-    color: rgb(227, 229, 233);
-}
-
-th {
-    font-weight: 600;
-    color: var(--yellow);
-    font-size: 1.3rem;
-}
-
-th,
-td {
-    padding: 0.357rem;
-    text-align: left;
-}
-
-/* fees section ends here */
-/* contact section starts here */
-
-.contact-us {
-    max-width: 82.142rem;
-    margin: 0 auto;
-}
-
-.fees-page,
-.fees-opacity {
-    height: 170vh;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-with-us {
-    margin-top: 3.571rem;
-    color: white;
-    font-size: 2.857rem;
-    margin-bottom: 1.785rem;
-}
-
-.contact-subtext {
-    font-size: 1.4rem;
-    color: white;
-    letter-spacing: 0.092rem;
-    margin-bottom: 2.857rem;
-}
-
-#map {
-    height: 28.57rem;
-    width: 100%;
-}
-
-.map {
-    margin-top: 3.571rem;
-}
-
-.form-container {
-    border-radius: 0.5rem;
-    background-color: rgb(236, 232, 232);
-    border: none;
-    padding: 1.785rem;
-    width: 30.714rem;
-    height: 39.285rem;
-    margin-right: 12.142rem;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-input::placeholder,
-textarea::placeholder {
-    font-size: 1.27rem;
-}
-
-label {
-    color: var(--footer-gray);
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
-    letter-spacing: 0.107rem;
-    word-spacing: 0.1rem;
-    font-size: 1.42rem;
-    margin-left: 0.714rem;
-}
-
-.email-phone {
-    display: flex;
-    justify-content: space-between;
-}
-
-.email-cont {
-    display: flex;
-    flex-direction: column;
-    width: 14.28rem;
-}
-
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 0.857rem;
-    background: none;
-    box-sizing: border-box;
-    margin-top: 0.428rem;
-    margin-bottom: 1.428rem;
-    resize: vertical;
-    border-width: 0 0 0.071rem 0;
-    border-color: lightgray;
-}
-
-input,
-select,
-textarea:focus {
-    outline: none;
-}
-
-.submit-btn {
-    font-size: 1.5rem;
-}
-
-input[type=submit] {
-    background-color: #105688;
-    color: white;
-    padding: 0.857rem 1.428rem;
-    border: none;
-    border-radius: 0.285rem;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #0d3857;
-}
-
-.contact-card {
-    display: flex;
-    align-items: center;
-    margin-top: 1.785rem;
-}
-
-.contact-nums {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-email,
-.contact-address-text,
-.contact-num1,
-.contact-num2 {
-    font-size: 1.571rem;
-    color: #bbb;
-    word-spacing: 0.142rem;
-    line-height: 1.2;
-    letter-spacing: 0.1rem;
-}
-
-.contact-num2:hover {
-    color: #fff;
-}
-
-.contact-num1:hover {
-    color: #fff;
-}
-
-.contact-email:hover {
-    color: #fff;
-}
-
-.contact-address-text:hover {
-    color: #fff;
-}
-
-.contact-icon {
-    color: #bbb;
-    font-size: 3rem;
-    margin-right: 3.928rem;
-}
-
-.contact-card:hover i {
-    color: white;
-}
-
-.horizontal-line {
-    width: 28.57rem;
-    height: 0.142rem;
-    background-color: #bbb;
-    margin-top: 3.571rem;
-}
-
-/*  */
-/*  */
-/******************* RESPONSIVE DESIGN ************************/
-@media screen and (max-width: 400px) {
-    .tab_div {
+    
+    .dd-a span {
+        color: white;
+    }
+    
+    .dd-c {
+        position: absolute;
+        background: white;
+        /*top: 30px;*/ /* consider addidng top property */
+        height: auto;
+        width: 100%;
+        transform: scaleY(0);
+        transform-origin: top left;
+        transition-duration: 0.2s;
+        -webkit-transform: scaleY(0);
+        -webkit-transform-origin: top left;
+        -webkit-transition-duration: 0.2s;
+    }
+    
+    .dd-c ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    .dd-c li {
+        white-space: nowrap;
+        display: block;
+        position: relative;
+    }
+    
+    .dd-link {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        padding: 0.357rem;
+        background: white;
+        color: black;
+    }
+    
+    .dd-link:before {
+        z-index: 0;
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        transform-origin: top left;
+        -webkit-transform-origin: top left;
+        background: var(--yellow);
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+    }
+    
+    .dd-link span {
+        display: block;
+        position: relative;
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+    }
+    
+    .dd-link:hover:before {
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+    }
+    
+    .dd-link:hover span {
+        color: white;
+    }
+    
+    .flag-img {
+        width: 1.828rem;
+        height: 1.828rem;
+    }
+    
+    .vertical-line {
+        border-left: 0.071rem solid var(--light-gray);
+        height: 2.142rem;
+        margin-left: 1.285rem;
+    }
+    
+    .login-cont {
+        margin-left: 1.071rem;
+    }
+    
+    .login-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .login-icon {
+        color: white;
+        margin-right: 0.714rem;
+    }
+    
+    .login {
+        font-size: 1.428rem;
+        color: white;
+    }
+    
+    .burger {
+        cursor: pointer;
         display: none;
     }
-}
-
-@media screen and (max-width: 1320px) {
-    html {
-        font-size: 12px;
+    
+    .burger div {
+        width: 1.785rem;
+        height: 0.214rem;
+        background-color: rgb(226, 226, 226);
+        margin: 0.357rem;
+        border-radius: 0.214rem;
+        transition: all 0.4s ease;
     }
-}
-
-@media screen and (max-width: 1100px) {
-    html {
-        font-size: 11px;
+    
+    .showcase {
+        /* This kind of behaviour isn't recommended because it has content, it has height and width, but its parent doesn't , see photo
+        https://ibb.co/4J2bZpB
+        https://ibb.co/nQRvDtM
+        */
+        font-weight: 400;
+        line-height: 1.4;
     }
-
+    
     .showcase-text {
-        width: 47%;
+        color: white;
+        width: 42%;
+        position: absolute;
+        top: 26%;
+        left: 12.2%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
     }
-}
-
-@media screen and (max-width: 930px) {
-    html {
-        font-size: 10px;
+    
+    .yellow {
+        color: var(--yellow);
+        font-size: 1.45rem;
     }
-
-    .navbar,
-    .fixed-nav {
+    
+    .main-text {
+        font-size: 3rem;
+        animation: fadeInBottom 1.5s ease-in-out;
     }
-}
-
-@media screen and (max-width: 830px) {
-    html {
-        font-size: 10px;
+    
+    .small-text {
+        font-weight: 500;
+        animation: fadeInBottom2 1.6s ease-in-out;
+        line-height: 1.5;
     }
-
-    .fixed-nav {
-        max-width: 90%;
+    /* header ends */
+    /* our services section starts */
+    
+    .our-services {
+        max-width: 82.142rem;
+        margin: 0 auto;
+        padding-bottom: 6.428rem;
     }
-
-    body {
-        overflow-x: hidden;
+    
+    .our-services-heading {
+        color: var(--blue);
+        font-weight: bold;
+        font-size: 2.6rem;
+        padding: 2.857rem 0;
     }
-
-    .header,
-    .opacity {
-        height: 75vh;
-    }
-
-    .logo {
-        flex: none;
-        display: inline-block;
-    }
-
-    .logo,
-    .burger,
-    .navbar,
-    .navbar-list {
-        z-index: 99999999999;
-    }
-
-    .navbar {
+    
+    .cards {
         display: flex;
         justify-content: space-between;
-    }
-
-    .navbar-list {
-        position: absolute;
-        background-color: var(--footer-blue);
-        right: 0px;
-        top: 0px;
-        height: 75vh;
-        display: flex;
         align-items: center;
+        margin-top: 1.785rem;
+    }
+    
+    .card {
+        width: 16.428rem;
+        height: 25rem;
+        border: 0.071rem solid #62AAEB;
+        border-radius: 1.071rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform .2s ease-in-out;
+    }
+    
+    .card:hover {
+        -ms-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
+    }
+    
+    .card-icon {
+        color: var(--yellow);
+        font-size: 4.5rem;
+        margin-top: 1.928rem;
+    }
+    
+    .card:hover .card-icon {
+        color: var(--blue);
+    }
+    
+    .card-name {
+        font-weight: 900;
+        color: #2C2C2C;
+        font-size: 1.714rem;
+        margin-top: 3.214rem;
+    }
+    
+    .card-info {
+        color: var(--light-gray);
+        text-align: center;
+        margin-top: 1.928rem;
+        font-size: 1.214rem;
+        width: 80%;
+        line-height: 1.4;
+    }
+    /* our services section ends */
+    /* Our clients section starts */
+    
+    .our-clients {
+        max-width: 100%;
+        background-color: var(--violet);
+    }
+    
+    .clients-container {
+        max-width: 82.142rem;
+        margin: 0 auto;
+    }
+    
+    .our-clients-heading {
+        color: var(--blue);
+        font-weight: bold;
+        font-size: 2.5rem;
+        padding: 3.214rem 0;
+    }
+    
+    .clients-btn-container {
+        display: flex;
         justify-content: center;
         flex-direction: column;
-        width: 38%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        align-items: center;
     }
-
-    .list-item-link,
-    .login,
-    .login-icon,
-    .dd-a {
-        font-size: 2.3rem;
-    }
-
-    .line-cont {
+    
+    .clients-row {
+        /* This is not a good practise, to have this kind of rows, because imagine how would backend parse data here. They wouldn't like to divide content into 4 block elements, they would rather send the whole bunch of data at once
+         https://ibb.co/Fw2bmYP
+         */
         display: none;
+    /*     For this case i would recommend display grid, it would be easier to place elements, and you won't need that kind of rows, even if you want to stick with flex, then you should see flex wrap property
+     https://css-tricks.com/snippets/css/complete-guide-grid/
+     */
+    }
+    
+    .row-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .client-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 18.214rem;
+        height: 12.142rem;
+        overflow: hidden;
+        background-color: white;
+        margin-left: 2.357rem;
+        margin-top: 2.142rem;
+        border: 0.071rem solid var(--border-color-gray);
+    /*    See comments for online section, this way you wouldn't need seperate class for each of the partners*/
+    }
+    
+    .client-card img {
+        transition: transform 0.8s ease
+    }
+    
+    .client-card:hover .card-logo {
+        -ms-transform: scale(1.08);
+        -webkit-transform: scale(1.08);
+        transform: scale(1.08);
     }
 
-    .navbar-list li {
-        opacity: 0;
-        margin: 18px 0px;
+    /*extra classes begin*/
+
+    .alma-store-logo {
+        width: 14.214rem;
+        height: 14.214rem;
+    }
+    
+    .araz-logo,
+    .miniso-logo {
+        width: 9.642rem;
+        height: 9.642rem;
+    }
+    
+    .azerimed-logo,
+    .naxcivan-logo,
+    .ekol-logo {
+        width: 15.714rem;
+        height: 15.714rem;
+    }
+    
+    .azeriqaz-logo,
+    .grant-logo,
+    .ideal-logo,
+    .nortwest-logo,
+    .pasha-logo,
+    .blueplanet-logo,
+    .prive-logo {
+        width: 12.5rem;
+        height: 8.571rem;
+    }
+    
+    .socar-logo,
+    .polymart-logo,
+    .papa-logo,
+    .shok-logo {
+        width: 12.857rem;
+        height: 6.785rem;
+    }
+    
+    .cofee-logo,
+    .alliance-logo,
+    .akkord-logo,
+    .cinici-logo,
+    .burger-logo,
+    .dominos-logo,
+    .mcdonalds-logo,
+    .evrika-logo,
+    .muxtaroglu-logo {
+        width: 11.357rem;
+        height: 11.357rem;
+    }
+    
+    .efendi-logo {
+        width: 13.571rem;
+        height: 10rem;
+    }
+    
+    .film-logo,
+    .garant-logo,
+    .global-logo,
+    .qala-logo {
+        width: 12.285rem;
+        height: 10.357rem;
+    }
+    
+    .mccan-logo,
+    .selhome-logo,
+    .shuttgart-logo,
+    .technol-logo {
+        width: 10.714rem;
+        height: 10.714rem;
+    }
+    
+    .transbroker-logo,
+    .zire-logo,
+    .master-logo {
+        width: 14.642rem;
+        height: 4.285rem;
     }
 
-    .burger {
-        display: block;
-    }
+    /*extra classes end*/
 
-    .showcase-text {
-        width: 55%;
-    }
 
-    .cards {
-        flex-direction: column;
-    }
-
-    .card {
-        height: 30rem;
-        width: 95%;
-        margin-top: 2rem;
-    }
-
-    .card-icon {
-        font-size: 5.2rem;
-        margin-top: 4.5rem;
-    }
-
-    .card-name {
-        font-size: 2.714rem;
-        margin-top: 3.28rem;
-
-    }
-
-    .card-info {
-        margin-top: 3.28rem;
-        font-size: 2.214rem;
-    }
-
-    .payments-bg,
-    .opacity-payment {
-        height: 44vh;
-    }
-
-    .online-payments {
-        flex-direction: column;
-    }
-
-    .opacity-payment {
-        flex-direction: column;
-    }
-
-    .payment {
-        width: 9.485rem;
-        height: 4rem;
-        margin-left: 1.8rem;
-    }
-
-    .payment-logo {
-        width: 6.385rem;
-        height: 2.814rem;
-    }
-
-    .read-more {
+    .load-btn {
+        background-color: var(--yellow);
         color: white;
-        position: unset;
-        font-size: 1.185rem;
-        padding: 1.128rem 3.285rem;
+        margin-top: 3.571rem;
+        margin-bottom: 3.571rem;
+        font-size: 1.285rem;
+        border: none;
+        cursor: pointer;
+        padding: 1.571rem 4.285rem;
+        text-transform: uppercase;
+        letter-spacing: 0.107rem;
+        font-weight: 700;
+        outline: none;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+        border-radius: 3.571rem;
+        border: 0.214rem solid #fff;
+        overflow: hidden;
+    }
+    
+    .load-icon {
+        color: white;
+    }
+    
+    .load-btn:hover {
+        background-color: var(--blue);
+    }
+    
+    .noContent {
+        color: #000 !important;
+        background-color: transparent !important;
+        pointer-events: none;
+    }
+    /* our clients ends here */
+    /* online-payments starts */
+    
+    .payments-bg {
+        background-image: url(../img/nasa\ bg.jpg);
+        /*You can use same trick with opacity here*/
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 72vh;
+        /* I wouldn't recommed usage of height generally, especially with vh, there are several problems like overflow of content, try paddings instead */
+        position: relative;
+    }
+    
+    .opacity-payment {
+        /*extra*/
+        height: 72vh;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .online-payments {
+        max-width: 82.142rem;
+        margin: 0 auto;
+    }
+    
+    .payment-heading {
+        color: white;
+        font-weight: bold;
+        font-size: 2.5rem;
+        padding: 3.214rem 0 2.142rem 0;
+    }
+    
+    .payment-methods {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .payment {
+        width: 16.785rem;
+        height: 7.714rem;
+
+        /*Here is why, i recommend usage of padding instead of fixed height*/
+        /*https://ibb.co/xzC5kT5*/
+        /*if you want to have all of that boxes to be the same size try the following, add the following */
+        /*padding: 1rem;*/
+        /*box-sizing: border-box;*/
+
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 2.142rem;
+        margin-top: 1.785rem;
+        transition: 0.3s;
+    }
+
+    /*it's also about having same size boxes, and not overflowed content*/
+    /*.payment-logo {*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*    object-fit: contain;*/
+    /*}*/
+
+    /* try first child property in order to remove extra margins where it's not required */
+    /*like below*/
+
+    /*.payment:first-child {*/
+    /*    margin-left: 0;*/
+    /*}*/
+
+
+    .payment:hover {
+        transform: translate(0, -0.9rem);
+    }
+    
+    .payments-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .emanat {
+        background-color: #ebebeb;
+    }
+    
+    .hesab {
+        background-color: #00a9e4;
+    }
+    
+    .million {
+        background-color: #d1010f;
+    }
+    
+    .IBA {
+        background-color: #4b99de;
+    }
+    
+    .birbank {
+        background-color: #b30838;
+    }
+    
+    .payment-name {
+        font-size: 1.785rem;
+        font-weight: 600;
+        color: #232323;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .read-more {
+        /* the same situation here, even though read more is inside of <a> tag, <a> tag doesnt have height,
+        button tag inside of a, isn't recommended, better to have span
+        */
+        position: absolute;
+        color: white;
+        top: 76%;
+        right: 5%;
+        font-size: 1.285rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 1.428rem 4.285rem;
         text-transform: uppercase;
         letter-spacing: 0.071rem;
         font-weight: 700;
@@ -1607,174 +713,1025 @@ input[type=submit]:hover {
         border: 0.071rem solid #fff;
         overflow: hidden;
     }
-
-    .client-card {
-        width: 15.214rem;
-        height: 9.142rem;
-        margin-left: 2rem;
-        margin-top: 2rem;
+    
+    .read-more:hover {
+        background-color: var(--yellow);
     }
-
-    .alma-store-logo {
-        width: 11.214rem;
-        height: 11.214rem;
+    
+    .icon-arrow-right {
+        margin-left: 1.071rem;
     }
-
-    .araz-logo,
-    .miniso-logo {
-        width: 7.642rem;
-        height: 7.642rem;
-    }
-
-    .azerimed-logo,
-    .naxcivan-logo,
-    .ekol-logo {
-        width: 13.714rem;
-        height: 13.714rem;
-    }
-
-    .azeriqaz-logo,
-    .grant-logo,
-    .ideal-logo,
-    .nortwest-logo,
-    .pasha-logo,
-    .blueplanet-logo,
-    .prive-logo {
-        width: 10.5rem;
-        height: 6.571rem;
-    }
-
-    .socar-logo,
-    .polymart-logo,
-    .papa-logo,
-    .shok-logo {
-        width: 10.857rem;
-        height: 4.785rem;
-    }
-
-    .cofee-logo,
-    .alliance-logo,
-    .akkord-logo,
-    .cinici-logo,
-    .burger-logo,
-    .dominos-logo,
-    .mcdonalds-logo,
-    .evrika-logo,
-    .muxtaroglu-logo {
-        width: 8.157rem;
-        height: 8.157rem;
-    }
-
-    .efendi-logo {
-        width: 11.571rem;
-        height: 9rem;
-    }
-
-    .film-logo,
-    .garant-logo,
-    .global-logo,
-    .qala-logo {
-        width: 10.285rem;
-        height: 8.357rem;
-    }
-
-    .mccan-logo,
-    .selhome-logo,
-    .shuttgart-logo,
-    .technol-logo {
-        width: 8.714rem;
-        height: 8.714rem;
-    }
-
-    .transbroker-logo,
-    .zire-logo,
-    .master-logo {
-        width: 10.642rem;
-        height: 3.285rem;
-    }
-
-    .absheron-logo {
-        width: 10.642rem;
-        height: 9.285rem;
-    }
-
-    /* contact */
-    /* contact ends */
-}
-
-@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .showcase-text {
-        width: 60%;
-    }
-
-    .list-item-link,
-    .login,
-    .login-icon,
-    .dd-a {
-        font-size: 1.8rem;
-    }
-
-    .card-icon {
-        font-size: 5rem;
-    }
-
-    .card-name {
-    }
-
-    .card-info {
-        font-size: 1.8rem;
-    }
-
+    /* online payments ends here */
+    /* Footer starts */
+    
     .footer-bg {
-        height: 54vh;
+        background-color: var(--footer-blue);
+        clip-path: polygon(0% 13%, 15% 0%, 100% 10%, 100% 100%, 0% 100%);
+        height: 50vh;
     }
-
+    
     .bg-light {
-        height: 54vh;
+        position: relative;
+        background-color: rgb(14, 39, 70);
+        height: 50vh;
     }
-
+    
     .footer-container {
-        padding-top: 4.071rem;
+        max-width: 82.142rem;
+        margin: 0 auto;
+        display: flex;
+        padding-top: 6.071rem;
     }
-
+    
+    .footer-text {
+        color: var(--dark-white);
+        line-height: 1.5;
+        letter-spacing: 0.078rem;
+        margin-top: 1.071rem;
+        width: 87%;
+    }
+    
     .footer-headings {
-        font-size: 1.328rem;
+        color: var(--dark-white);
+        font-size: 1.428rem;
+        font-weight: 700;
     }
-
+    
+    .bottom-logo {
+        display: flex;
+        flex-direction: column;
+    }
+    
     .bottom-nav-links {
-        width: 28%;
+        display: flex;
+        flex-direction: column;
+        width: 22%
     }
-
+    
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .num1,
+    .num2,
+    .email {
+        margin-top: 1.071rem;
+    }
+    
+    .address {
+        display: flex;
+        flex-direction: column;
+    }
+    
     .contact,
     .address {
-        margin-left: 3rem;
+        margin-left: 3.214rem;
     }
-
-
-
-}
-
-
-
-@keyframes navLinkFade {
-    from {
+    
+    .address-text {
+        margin-top: 1.071rem;
+        letter-spacing: 0.078rem;
+        line-height: 1.5;
+    }
+    
+    .address-text,
+    .num1,
+    .num2,
+    .email {
+        color: #888;
+    }
+    
+    .link {
+        color: #888;
+        margin-top: 1.071rem;
+    }
+    
+    .link:hover {
+        color: var(--yellow);
+    }
+    /* footer ends here */
+    /* Animations */
+    
+    @keyframes fadeInBottom {
+        from {
+            opacity: 0;
+            transform: translateY(35%);
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes fadeInBottom2 {
+        from {
+            opacity: 0;
+            transform: translateY(55%);
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    /* ________________________________________________________________________________________________________________________ */
+    /* ----------------payment page-----------------------------  */
+    
+    .payment-header {
+        background-image: url(../img/nasa\ bg.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 130vh;
+    }
+    
+    .payment-page-opacity {
+        background-color: rgba(0, 0, 0, 0.4);
+        height: 130vh;
+    }
+    
+    .text-below {
+        margin-top: 2.857rem
+    }
+    
+    .below-payments {
+        width: 82.142rem;
+        margin: 0 auto;
+        padding-top: 4.285rem;
+    }
+    
+    .payment-pic-container {
+        margin-top: 2.857rem;
+    }
+    
+    .how-to-pay {
+        color: white;
+        font-size: 2.8rem;
+        font-weight: 600;
+        letter-spacing: 0.085rem;
+    }
+    
+    .payment-pic {
+        width: 45%;
+        height: 40vh;
+        background-image: url(../img/payment-methods/paymentmethods.jpg);
+        border-radius: 0.571rem;
+        position: relative;
+    }
+    
+    .text-body {
+        position: absolute;
+        left: 42%;
+        top: 38%;
+        width: 40%;
+        background-color: #0d3857;
+        height: 29vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .payment-text {
+        color: white;
+        font-size: 1.65rem;
+        width: 80%;
+        line-height: 1.4;
+    }
+    /*  payment page ends here*/
+    /* _____________________________________________________________________________________________ */
+    /*  */
+    /*  */
+    /* About us page starts here */
+    
+    #counter {
+        height: auto;
+        max-width: 82.142rem;
+        margin: 0 auto;
+    }
+    
+    .counter-heading {
+        color: var(--blue);
+        font-size: 3.9rem;
+        font-weight: 600;
+        margin-top: 2.571rem;
+    }
+    
+    .counter-big-counter {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .counter-values {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        margin-top: 3.214rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .counter-value {
+        color: var(--yellow);
+        font-size: 3.43rem;
+        font-weight: 600;
+        margin-right: 16rem;
+    }
+    
+    .regions {
+        position: absolute;
+        color: var(--yellow);
+        font-size: 2.285rem;
+        font-weight: 600;
+        left: 22%;
+        top: 15.5%;
+    }
+    
+    .years {
+        position: absolute;
+        color: var(--yellow);
+        font-size: 2.285rem;
+        font-weight: 600;
+        left: 15%;
+        top: 15.5%;
+    }
+    
+    .user {
+        position: absolute;
+        color: var(--yellow);
+        font-size: 2.285rem;
+        font-weight: 600;
+        right: 38%;
+        top: 15.5%;
+    }
+    
+    .container-cc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .counter-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    .experience,
+    .districts,
+    .users {
+        font-size: 1.142rem;
+        font-weight: 600;
+        word-spacing: 0.142rem;
+        color: var(--footer-gray);
+        margin-top: 0.714rem;
+    }
+    
+    .districts {
+        margin-right: 1.928rem;
+    }
+    
+    .users {
+        margin-right: 4.071rem;
+    }
+    
+    .about-header {
+        background-image: url(../img/nasa\ bg.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+    }
+    
+    .about-opacity {
+        background-color: rgba(0, 0, 0, 0.4);
+        height: 100vh;
+    }
+    
+    .about-us-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2.142rem;
+        height: auto;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.6);
+    /*    Mence burda bunun bele transparent olmagi sadece asshaqida ki planeta gorsensin deye olur, mence gesheng gorsenmir
+https://ibb.co/Ry6gcvX
+     */
+    }
+    
+    .second-container {
+        max-width: 82.142rem;
+        margin: 0 auto;
+    }
+    
+    .About-heading,
+    .our-mission-heading,
+    .services-heading {
+        color: #2E4D7D;
+        font-weight: 700;
+        font-size: 2.428rem;
+        margin-top: 2.142rem;
+    }
+    
+    .about-us,
+    .our-mission {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .our-mission {
+        margin-bottom: 1.428rem;
+    }
+    
+    .aboutus,
+    .ourmission {
+        margin-top: 1.428rem;
+        color: var(--footer-blue);
+        text-align: center;
+        font-size: 1.571rem;
+        font-weight: 500;
+        line-height: 1.7;
+    }
+    
+    .services-heading {
+        color: var(--blue);
+        padding-top: 3.571rem;
+        margin-bottom: 2.857rem;
+        font-size: 2.6rem;
+    }
+    
+    .company-services {
+        max-width: 82.142rem;
+        margin: 0 auto;
+    }
+    
+    .company-services-container {
+        background-color: var(--violet);
+    }
+    
+    .service-cards {
+        /*Usage of grid is preferred, wrong allignment
+https://ibb.co/N7N99ZY
+        */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2.857rem;
+    }
+    
+    .service-card-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3.214rem;
+    }
+    
+    .service-card {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border: 0.071rem solid var(--border-color-gray);
+        color: var(--footer-gray);
+        width: 24.857rem;
+        height: 14.285rem;
+        border-radius: 0.5rem;
+        margin-left: 3.214rem;
+    }
+    
+    .service-card {
+        transition: all 0.4s;
+        color: var(--blue);
+        font-size: 3.3rem;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    .service-card:hover {
+        -ms-transform: scale(1.15);
+        -webkit-transform: scale(1.15);
+        transform: scale(1.15);
+        background-color: white;
+        color: var(--yellow);
+    }
+    
+    .services-card-name {
+        font-weight: 700;
+        color: #2C2C2C;
+        font-size: 1.64rem;
+        margin-top: 2.5rem;
+    }
+    /* About us page ends here */
+    /* --------------------------------------------------------------------------------- */
+    /* FEES page starts */
+    
+    .page-header {
+        background-image: url(../img/nasa\ bg.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 120vh;
+        position: relative;
+    }
+    
+    .page-opacity {
+        font-family: 'Lato', sans-serif;
+        background-color: rgba(0, 0, 0, 0.4);
+        height: 120vh;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .fiber-icon,
+    .phone-icon,
+    .tv-icon {
+        color: white;
+        font-size: 2rem;
+    }
+    
+    .icon-download {
+        color: white;
+        font-size: 1.142rem;
+        margin-right: 0.571rem;
+    }
+    
+    .download:hover .icon-download {
+        color: var(--yellow);
+        transition: all 0.3s;
+    }
+    
+    .download:hover {
+        color: var(--yellow);
+        transition: all 0.3s;
+    }
+    
+    @media screen and (max-width: 400px) {
+        .tab_div {
+            display: none;
+        }
+    }
+    
+    .icon {
+        margin-right: 1.071rem;
+    }
+    
+    .tab_div {
+        position: absolute;
+        top: 18%;
+        width: 100%;
+        transform: translateZ(0);
+    }
+    
+    .tabs_menu {
+        width: 17%;
+        position: absolute;
+        left: 0;
+    }
+    
+    ul.tabs {
+        padding: 0;
+    }
+    
+    #tab1,
+    #tab2,
+    #tab3 {
+        padding-top: 10%;
+        padding-bottom: 10%;
+        padding-left: 5%;
+        padding-right: 1%;
+        width: 100%;
+    }
+    
+    ul.tabs li {
+        list-style-type: none;
+        border-right: 0.142rem solid var(--yellow);
+        font-size: 1.5rem;
+        color: white;
+    }
+    
+    #tab1_content,
+    #tab2_content,
+    #tab3_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 55%;
+        padding: 2.142rem;
+        margin: 0 auto;
+        height: auto;
+        background-color: rgba(16, 56, 92, 0.7);
+    }
+    
+    .title {
+        font-size: 2.6rem;
+        margin-bottom: 1.428rem;
+    }
+    
+    .tab-details {
+        font-size: 1.5rem;
+        letter-spacing: 0.08rem;
+        line-height: 1.45;
+    }
+    
+    .tab-ul {
+        list-style: disc;
+    }
+    
+    .title,
+    .tab-details {
+        color: rgb(227, 229, 233);
+    }
+    
+    ul.tabs li {
+        display: inline-block;
+        position: relative;
+        padding: 1em;
+        cursor: pointer;
+        background: #17171e;
+        color: white;
+        z-index: 0;
+    }
+    
+    ul.tabs li:before {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--yellow);
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition: transform .5s ease-out;
+    }
+    
+    ul.tabs li:hover:before {
+        transform: scaleX(1);
+    }
+    
+    table {
+        width: 100%;
+        margin-top: 3.571rem;
+    }
+    
+    table,
+    th,
+    td {
+        border: 0.071rem solid white;
+        border-collapse: collapse;
+        color: rgb(227, 229, 233);
+    }
+    
+    th {
+        font-weight: 600;
+        color: var(--yellow);
+        font-size: 1.3rem;
+    }
+    
+    th,
+    td {
+        padding: 0.357rem;
+        text-align: left;
+    }
+    /* fees section ends here */
+    /* contact section starts here */
+    
+    .contact-us {
+        max-width: 82.142rem;
+        margin: 0 auto;
+    }
+    
+    .fees-page,
+    .fees-opacity {
+        height: 170vh;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contact-with-us {
+        margin-top: 3.571rem;
+        color: white;
+        font-size: 2.857rem;
+        margin-bottom: 1.785rem;
+    }
+    
+    .contact-subtext {
+        font-size: 1.4rem;
+        color: white;
+        letter-spacing: 0.092rem;
+        margin-bottom: 2.857rem;
+    }
+    
+    #map {
+        height: 28.57rem;
+        width: 100%;
+    }
+    
+    .map {
+        margin-top: 3.571rem;
+    }
+    
+    .form-container {
+        border-radius: 0.5rem;
+        background-color: rgb(236, 232, 232);
+        border: none;
+        padding: 1.785rem;
+        width: 30.714rem;
+        height: 39.285rem;
+        margin-right: 12.142rem;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    input::placeholder,
+    textarea::placeholder {
+        font-size: 1.27rem;
+    }
+    
+    label {
+        color: var(--footer-gray);
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+        letter-spacing: 0.107rem;
+        word-spacing: 0.1rem;
+        font-size: 1.42rem;
+        margin-left: 0.714rem;
+    }
+    
+    .email-phone {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .email-cont {
+        display: flex;
+        flex-direction: column;
+        width: 14.28rem;
+    }
+    
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 0.857rem;
+        background: none;
+        box-sizing: border-box;
+        margin-top: 0.428rem;
+        margin-bottom: 1.428rem;
+        resize: vertical;
+        border-width: 0 0 0.071rem 0;
+        border-color: lightgray;
+    }
+    
+    input,
+    select,
+    textarea:focus {
+        outline: none;
+    }
+    
+    .submit-btn {
+        font-size: 1.5rem;
+    }
+    
+    input[type=submit] {
+        background-color: #105688;
+        color: white;
+        padding: 0.857rem 1.428rem;
+        border: none;
+        border-radius: 0.285rem;
+        cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+        background-color: #0d3857;
+    }
+    
+    .contact-card {
+        display: flex;
+        align-items: center;
+        margin-top: 1.785rem;
+    }
+    
+    .contact-nums {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contact-email,
+    .contact-address-text,
+    .contact-num1,
+    .contact-num2 {
+        font-size: 1.571rem;
+        color: #bbb;
+        word-spacing: 0.142rem;
+        line-height: 1.2;
+        letter-spacing: 0.1rem;
+    }
+    
+    .contact-num2:hover {
+        color: #fff;
+    }
+    
+    .contact-num1:hover {
+        color: #fff;
+    }
+    
+    .contact-email:hover {
+        color: #fff;
+    }
+    
+    .contact-address-text:hover {
+        color: #fff;
+    }
+    
+    .contact-icon {
+        color: #bbb;
+        font-size: 3rem;
+        margin-right: 3.928rem;
+    }
+    
+    .contact-card:hover i {
+        color: white;
+    }
+    
+    .horizontal-line {
+        width: 28.57rem;
+        height: 0.142rem;
+        background-color: #bbb;
+        margin-top: 3.571rem;
+    }
+    /*  */
+    /*  */
+    /******************* RESPONSIVE DESIGN ************************/
+    
+    @media (max-width:1320px) {
+        html {
+            font-size: 12px;
+        }
+    }
+    
+    @media screen and (max-width:1100px) {
+        html {
+            font-size: 11px;
+        }
+    }
+    
+    @media screen and (max-width:930px) {
+        html {
+            font-size: 10px;
+        }
+        .navbar,
+        .fixed-nav {
+            max-width: 95%;
+        }
+    }
+    
+    @media screen and (max-width:830px) {
+        html {
+            font-size: 10px;
+        }
+        .fixed-nav {
+            max-width: 90%;
+        }
+        body {
+            overflow-x: hidden;
+        }
+        .header,
+        .opacity {
+            height: 75vh;
+        }
+        .logo {
+            flex: none;
+            display: inline-block;
+        }
+        .logo,
+        .burger,
+        .navbar,
+        .navbar-list {
+            z-index: 99999999999;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+        }
+        .navbar-list {
+            position: absolute;
+            background-color: var(--footer-blue);
+            right: 0px;
+            top: 0px;
+            height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 38%;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in;
+        }
+        .list-item-link,
+        .login,
+        .login-icon,
+        .dd-a {
+            font-size: 2.3rem;
+        }
+        .line-cont {
+            display: none;
+        }
+        .navbar-list li {
+            opacity: 0;
+            margin: 18px 0px;
+        }
+        .burger {
+            display: block;
+        }
+        .payments-bg,
+        .opacity-payment {
+            height: 44vh;
+        }
+        .online-payments {
+            flex-direction: column;
+        }
+        .opacity-payment {
+            flex-direction: column;
+        }
+        .payment {
+            width: 9.485rem;
+            height: 4rem;
+            margin-left: 1.8rem;
+        }
+        .payment-logo {
+            width: 6.385rem;
+            height: 2.814rem;
+        }
+        .read-more {
+            color: white;
+            position: unset;
+            font-size: 1.185rem;
+            padding: 1.128rem 3.285rem;
+            text-transform: uppercase;
+            letter-spacing: 0.071rem;
+            font-weight: 700;
+            outline: none;
+            -webkit-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+            border-radius: 3.571rem;
+            border: 0.071rem solid #fff;
+            overflow: hidden;
+        }
+        .client-card {
+            width: 15.214rem;
+            height: 9.142rem;
+            margin-left: 2rem;
+            margin-top: 2rem;
+        }
+        .alma-store-logo {
+            width: 11.214rem;
+            height: 11.214rem;
+        }
+        .araz-logo,
+        .miniso-logo {
+            width: 7.642rem;
+            height: 7.642rem;
+        }
+        .azerimed-logo,
+        .naxcivan-logo,
+        .ekol-logo {
+            width: 13.714rem;
+            height: 13.714rem;
+        }
+        .azeriqaz-logo,
+        .grant-logo,
+        .ideal-logo,
+        .nortwest-logo,
+        .pasha-logo,
+        .blueplanet-logo,
+        .prive-logo {
+            width: 10.5rem;
+            height: 6.571rem;
+        }
+        .socar-logo,
+        .polymart-logo,
+        .papa-logo,
+        .shok-logo {
+            width: 10.857rem;
+            height: 4.785rem;
+        }
+        .cofee-logo,
+        .alliance-logo,
+        .akkord-logo,
+        .cinici-logo,
+        .burger-logo,
+        .dominos-logo,
+        .mcdonalds-logo,
+        .evrika-logo,
+        .muxtaroglu-logo {
+            width: 8.157rem;
+            height: 8.157rem;
+        }
+        .efendi-logo {
+            width: 11.571rem;
+            height: 9rem;
+        }
+        .film-logo,
+        .garant-logo,
+        .global-logo,
+        .qala-logo {
+            width: 10.285rem;
+            height: 8.357rem;
+        }
+        .mccan-logo,
+        .selhome-logo,
+        .shuttgart-logo,
+        .technol-logo {
+            width: 8.714rem;
+            height: 8.714rem;
+        }
+        .transbroker-logo,
+        .zire-logo,
+        .master-logo {
+            width: 10.642rem;
+            height: 3.285rem;
+        }
+        .absheron-logo {
+            width: 10.642rem;
+            height: 9.285rem;
+        }
+        /* contact */
+        /* contact ends */
+    }
+    
+    @media screen and (min-device-width:320px) and (max-device-width:480px) {
+        .showcase-text {
+            width: 60%;
+        }
+        .list-item-link,
+        .login,
+        .login-icon,
+        .dd-a {
+            font-size: 1.8rem;
+        }
+        .footer-bg {
+            height: 54vh;
+        }
+        .bg-light {
+            height: 54vh;
+        }
+        .footer-container {
+            padding-top: 4.071rem;
+        }
+        .footer-headings {
+            font-size: 1.328rem;
+        }
+        .bottom-nav-links {
+            width: 28%;
+        }
+        .contact,
+        .address {
+            margin-left: 3rem;
+        }
+    }
+    
+    .nav-active {
+        transform: translateX(0%);
+    }
+    
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-0.357rem, 0.428rem);
+    }
+    
+    .toggle .line2 {
         opacity: 0;
-        transform: translateX(50px);
     }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
+    
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-0.357rem, -0.428rem);
     }
-}
-
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-0.357rem, 0.428rem);
-}
-
-.toggle .line2 {
-    opacity: 0;
-}
-
-.toggle .line3 {
-    transform: rotate(45deg) translate(-0.357rem, -0.428rem);
-}
