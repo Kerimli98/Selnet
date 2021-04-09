@@ -1018,6 +1018,9 @@
         height: auto;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.6);
+    /*    Mence burda bunun bele transparent olmagi sadece asshaqida ki planeta gorsensin deye olur, mence gesheng gorsenmir
+https://ibb.co/Ry6gcvX
+     */
     }
     
     .second-container {
@@ -1073,6 +1076,9 @@
     }
     
     .service-cards {
+        /*Usage of grid is preferred, wrong allignment
+https://ibb.co/N7N99ZY
+        */
         display: flex;
         justify-content: center;
         align-items: center;
