@@ -385,12 +385,13 @@ body {
 }
 
 /* our services section ends */
+/**/
+/**/
 /* Our clients section starts */
 
 .our-clients {
     background-color: var(--violet);
 }
-
 
 .our-clients-heading {
     color: var(--blue);
@@ -406,34 +407,22 @@ body {
     align-items: center;
 }
 
-.clients-row {
-    /* This is not a good practise, to have this kind of rows, because imagine how would backend parse data here. They wouldn't like to divide content into 4 block elements, they would rather send the whole bunch of data at once
-     https://ibb.co/Fw2bmYP
-     */
-    display: none;
-    /*     For this case i would recommend display grid, it would be easier to place elements, and you won't need that kind of rows, even if you want to stick with flex, then you should see flex wrap property
-     https://css-tricks.com/snippets/css/complete-guide-grid/
-     */
-}
-
-.row-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.clients {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 9vw);
+    grid-gap: 20px;
 }
 
 .client-card {
-    padding: 2rem;
+    padding: 0.6rem;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     background-color: white;
-    margin-left: 2.357rem;
-    margin-top: 2.142rem;
     border: 0.071rem solid var(--border-color-gray);
-    /*    See comments for online section, this way you wouldn't need seperate class for each of the partners*/
 }
 
 .card-logo {
@@ -451,89 +440,6 @@ body {
     -webkit-transform: scale(1.08);
     transform: scale(1.08);
 }
-
-/*extra classes begin*/
-
-.alma-store-logo {
-    width: 14.214rem;
-    height: 14.214rem;
-}
-
-.araz-logo,
-.miniso-logo {
-    width: 9.642rem;
-    height: 9.642rem;
-}
-
-.azerimed-logo,
-.naxcivan-logo,
-.ekol-logo {
-    width: 15.714rem;
-    height: 15.714rem;
-}
-
-.azeriqaz-logo,
-.grant-logo,
-.ideal-logo,
-.nortwest-logo,
-.pasha-logo,
-.blueplanet-logo,
-.prive-logo {
-    width: 12.5rem;
-    height: 8.571rem;
-}
-
-.socar-logo,
-.polymart-logo,
-.papa-logo,
-.shok-logo {
-    width: 12.857rem;
-    height: 6.785rem;
-}
-
-.cofee-logo,
-.alliance-logo,
-.akkord-logo,
-.cinici-logo,
-.burger-logo,
-.dominos-logo,
-.mcdonalds-logo,
-.evrika-logo,
-.muxtaroglu-logo {
-    width: 11.357rem;
-    height: 11.357rem;
-}
-
-.efendi-logo {
-    width: 13.571rem;
-    height: 10rem;
-}
-
-.film-logo,
-.garant-logo,
-.global-logo,
-.qala-logo {
-    width: 12.285rem;
-    height: 10.357rem;
-}
-
-.mccan-logo,
-.selhome-logo,
-.shuttgart-logo,
-.technol-logo {
-    width: 10.714rem;
-    height: 10.714rem;
-}
-
-.transbroker-logo,
-.zire-logo,
-.master-logo {
-    width: 14.642rem;
-    height: 4.285rem;
-}
-
-/*extra classes end*/
-
 
 .load-btn {
     background-color: var(--yellow);
@@ -570,6 +476,8 @@ body {
 }
 
 /* our clients ends here */
+/**/
+/**/
 /* online-payments starts */
 
 .payments-bg {
@@ -583,18 +491,18 @@ body {
     color: white;
     font-weight: bold;
     font-size: 2.5rem;
-    padding: 1.214rem 0 2.142rem 0;
+    padding-bottom: 1.5rem;
 }
 
 .payment-methods {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 8vw);
+    grid-gap: 15px;
 }
 
 .payment {
-    padding: 1rem;
+    padding: 2.3rem;
     box-sizing: border-box;
     border-radius: 0.5rem;
     display: flex;
@@ -606,7 +514,40 @@ body {
     transition: 0.3s;
 }
 
-/*it's also about having same size boxes, and not overflowed content*/
+
+.emanat {
+    background-color: #ebebeb;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.hesab {
+    background-color: #00a9e4;
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.million {
+    background-color: #d1010f;
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+.IBA {
+    background-color: #4b99de;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    padding: 1.7rem;
+}
+
+.birbank {
+    padding: 1.5rem;
+    background-color: #b30838;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
 .payment-logo {
     width: 100%;
     height: 100%;
@@ -614,7 +555,7 @@ body {
 }
 
 
-.payment:first-child {
+.payment:first-child, .payment:nth-child(4) {
     margin-left: 0;
 }
 
@@ -622,50 +563,8 @@ body {
     transform: translate(0, -0.9rem);
 }
 
-.payments-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.emanat {
-    padding: 2.28rem;
-    background-color: #ebebeb;
-}
-
-.hesab {
-    padding: 2.65rem;
-    background-color: #00a9e4;
-}
-
-.million {
-    padding: 2.46rem 4.8rem;
-    background-color: #d1010f;
-}
-
-.IBA {
-    padding: 1.7rem 4.6rem;
-    background-color: #4b99de;
-}
-
-.birbank {
-    background-color: #b30838;
-}
-
-.payment-name {
-    font-size: 1.785rem;
-    font-weight: 600;
-    color: #232323;
-}
-
-a {
-    text-decoration: none;
-}
 
 .read-more {
-    /* the same situation here, even though read more is inside of <a> tag, <a> tag doesnt have height,
-    button tag inside of a, isn't recommended, better to have span
-    */
     position: absolute;
     color: white;
     top: 76%;
@@ -698,6 +597,8 @@ a {
 }
 
 /* online payments ends here */
+/**/
+/**/
 /* Footer starts */
 
 .footer-bg {

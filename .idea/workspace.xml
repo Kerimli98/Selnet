@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6515f534-af71-4e91-93b8-6abe3aa27e36" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/SELNET.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SELNET.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617442161563</updated>
       <workItem from="1617442162744" duration="6276000" />
+      <workItem from="1618410465619" duration="10094000" />
     </task>
     <servers />
   </component>
@@ -52,6 +57,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="147" y="71" key="MergeDialog" timestamp="1618410069585">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="147" y="71" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1618410069585" />
+    <state x="481" y="129" key="MultipleFileMergeDialog" timestamp="1618410069607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="481" y="129" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1618410069607" />
     <state x="463" y="10" width="609" height="804" key="find.popup" timestamp="1617455972481">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
