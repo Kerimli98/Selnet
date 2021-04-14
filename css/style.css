@@ -7,10 +7,11 @@
     --border-color-gray: #D5DDE4;
     --violet: #F6F8FE;
     --footer-gray: #1f1f1f;
-    --footer-blue: #041431;
+    --footer-blue: #0f1e31;
     --footer-light-gray: #3a3737;
     --dark-white: #bbb;
 }
+
 
 html {
     font-size: 14px;
@@ -21,12 +22,14 @@ body {
 }
 
 /* header starts */
+.fixed-container {
+    max-width: 82.142rem;
+    margin: 0 auto;
+
+}
 
 .header {
-    background-image: url(../img/selnet-4.png);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/selnet-4.png') no-repeat fixed center;
     background-size: cover;
     height: 100vh;
 }
@@ -41,17 +44,11 @@ body {
     padding-top: 1rem;
 }
 
-.opacity {
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 100vh;
-}
 
 .navbar {
-    max-width: 82.142rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
 }
 
 .navbar-list {
@@ -62,7 +59,7 @@ body {
 
 .navBar {
     position: fixed;
-    top: 0px;
+    top: 0;
     height: 14vh;
     width: 100%;
     background-color: var(--footer-blue);
@@ -81,9 +78,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-.nav-active {
-    transform: translateX(0%);
-}
+
 .list-item-link {
     font-weight: 500;
     color: white;
@@ -105,11 +100,6 @@ body {
     height: 100%;
     max-width: 100%;
     margin-left: 2.5rem;
-}
-
-.Selnet-logo {
-    height: auto;
-    max-width: 14.214rem;
 }
 
 .dropdown {
@@ -178,6 +168,7 @@ body {
 .dd-c {
     position: absolute;
     background: white;
+    top: 30px;
     height: auto;
     width: 100%;
     transform: scaleY(0);
@@ -209,6 +200,7 @@ body {
     color: black;
 }
 
+
 .dd-link:before {
     z-index: 0;
     content: "";
@@ -227,11 +219,20 @@ body {
     -webkit-transform: scaleX(0);
 }
 
+.lang {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
 .dd-link span {
-    display: block;
     position: relative;
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
+}
+
+.dd-link span {
+    display: flex;
+    align-items: center;
 }
 
 .dd-link:hover:before {
@@ -246,6 +247,7 @@ body {
 .flag-img {
     width: 1.828rem;
     height: 1.828rem;
+    margin-left: 1rem;
 }
 
 .vertical-line {
@@ -288,21 +290,17 @@ body {
     transition: all 0.4s ease;
 }
 
-.showcase {
-    max-width: 82.142rem;
-    margin: 0 auto;
-    font-weight: 400;
-    line-height: 1.4;
-}
 
 .showcase-text {
+    font-weight: 400;
+    line-height: 1.4;
     color: white;
-    width: 42%;
+    width: 41%;
     position: absolute;
     top: 26%;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     justify-content: center;
 }
 
@@ -326,8 +324,6 @@ body {
 /* our services section starts */
 
 .our-services {
-    max-width: 82.142rem;
-    margin: 0 auto;
     padding-bottom: 6.428rem;
 }
 
@@ -392,14 +388,9 @@ body {
 /* Our clients section starts */
 
 .our-clients {
-    max-width: 100%;
     background-color: var(--violet);
 }
 
-.clients-container {
-    max-width: 82.142rem;
-    margin: 0 auto;
-}
 
 .our-clients-heading {
     color: var(--blue);
@@ -416,7 +407,13 @@ body {
 }
 
 .clients-row {
+    /* This is not a good practise, to have this kind of rows, because imagine how would backend parse data here. They wouldn't like to divide content into 4 block elements, they would rather send the whole bunch of data at once
+     https://ibb.co/Fw2bmYP
+     */
     display: none;
+    /*     For this case i would recommend display grid, it would be easier to place elements, and you won't need that kind of rows, even if you want to stick with flex, then you should see flex wrap property
+     https://css-tricks.com/snippets/css/complete-guide-grid/
+     */
 }
 
 .row-container {
@@ -426,16 +423,23 @@ body {
 }
 
 .client-card {
+    padding: 2rem;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 18.214rem;
-    height: 12.142rem;
     overflow: hidden;
     background-color: white;
     margin-left: 2.357rem;
     margin-top: 2.142rem;
     border: 0.071rem solid var(--border-color-gray);
+    /*    See comments for online section, this way you wouldn't need seperate class for each of the partners*/
+}
+
+.card-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .client-card img {
@@ -447,6 +451,8 @@ body {
     -webkit-transform: scale(1.08);
     transform: scale(1.08);
 }
+
+/*extra classes begin*/
 
 .alma-store-logo {
     width: 14.214rem;
@@ -526,13 +532,15 @@ body {
     height: 4.285rem;
 }
 
+/*extra classes end*/
+
+
 .load-btn {
     background-color: var(--yellow);
     color: white;
     margin-top: 3.571rem;
     margin-bottom: 3.571rem;
     font-size: 1.285rem;
-    border: none;
     cursor: pointer;
     padding: 1.571rem 4.285rem;
     text-transform: uppercase;
@@ -565,30 +573,17 @@ body {
 /* online-payments starts */
 
 .payments-bg {
-    background-image: url(../img/nasa bg.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/nasa\ bg.jpg') no-repeat fixed center;
     background-size: cover;
-    height: 72vh;
+    padding: 6rem 10rem;
     position: relative;
-}
-
-.opacity-payment {
-    height: 72vh;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.online-payments {
-    max-width: 82.142rem;
-    margin: 0 auto;
 }
 
 .payment-heading {
     color: white;
     font-weight: bold;
     font-size: 2.5rem;
-    padding: 3.214rem 0 2.142rem 0;
+    padding: 1.214rem 0 2.142rem 0;
 }
 
 .payment-methods {
@@ -599,8 +594,8 @@ body {
 }
 
 .payment {
-    width: 16.785rem;
-    height: 7.714rem;
+    padding: 1rem;
+    box-sizing: border-box;
     border-radius: 0.5rem;
     display: flex;
     justify-content: center;
@@ -609,6 +604,18 @@ body {
     margin-left: 2.142rem;
     margin-top: 1.785rem;
     transition: 0.3s;
+}
+
+/*it's also about having same size boxes, and not overflowed content*/
+.payment-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.payment:first-child {
+    margin-left: 0;
 }
 
 .payment:hover {
@@ -622,18 +629,22 @@ body {
 }
 
 .emanat {
+    padding: 2.28rem;
     background-color: #ebebeb;
 }
 
 .hesab {
+    padding: 2.65rem;
     background-color: #00a9e4;
 }
 
 .million {
+    padding: 2.46rem 4.8rem;
     background-color: #d1010f;
 }
 
 .IBA {
+    padding: 1.7rem 4.6rem;
     background-color: #4b99de;
 }
 
@@ -652,12 +663,14 @@ a {
 }
 
 .read-more {
+    /* the same situation here, even though read more is inside of <a> tag, <a> tag doesnt have height,
+    button tag inside of a, isn't recommended, better to have span
+    */
     position: absolute;
     color: white;
     top: 76%;
     right: 5%;
     font-size: 1.285rem;
-    border: none;
     background: none;
     cursor: pointer;
     padding: 1.428rem 4.285rem;
@@ -667,10 +680,13 @@ a {
     outline: none;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
-    transition: all 0.4s;
     border-radius: 3.571rem;
     border: 0.071rem solid #fff;
     overflow: hidden;
+}
+
+.read-more {
+    transition: all 0.4s;
 }
 
 .read-more:hover {
@@ -697,8 +713,6 @@ a {
 }
 
 .footer-container {
-    max-width: 82.142rem;
-    margin: 0 auto;
     display: flex;
     padding-top: 6.071rem;
 }
@@ -798,26 +812,17 @@ a {
 /* ----------------payment page-----------------------------  */
 
 .payment-header {
-    background-image: url(../img/nasa\ bg.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url('../img/nasa\ bg.jpg'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) no-repeat fixed center;
     background-size: cover;
     height: 130vh;
 }
 
-.payment-page-opacity {
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 130vh;
-}
 
 .text-below {
     margin-top: 2.857rem
 }
 
 .below-payments {
-    width: 82.142rem;
-    margin: 0 auto;
     padding-top: 4.285rem;
 }
 
@@ -835,7 +840,7 @@ a {
 .payment-pic {
     width: 45%;
     height: 40vh;
-    background-image: url(../img/payment-methods/paymentmethods.jpg);
+    background-image: url('../img/payment-methods/paymentmethods.jpg');
     border-radius: 0.571rem;
     position: relative;
 }
@@ -867,8 +872,6 @@ a {
 
 #counter {
     height: auto;
-    max-width: 82.142rem;
-    margin: 0 auto;
 }
 
 .counter-heading {
@@ -958,18 +961,10 @@ a {
 }
 
 .about-header {
-    background-image: url(../img/nasa\ bg.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url('../img/nasa\ bg.jpg'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) no-repeat fixed center;
     background-size: cover;
     height: 100vh;
     position: relative;
-}
-
-.about-opacity {
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 100vh;
 }
 
 .about-us-container {
@@ -983,10 +978,6 @@ a {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-.second-container {
-    max-width: 82.142rem;
-    margin: 0 auto;
-}
 
 .About-heading,
 .our-mission-heading,
@@ -1026,10 +1017,6 @@ a {
     font-size: 2.6rem;
 }
 
-.company-services {
-    max-width: 82.142rem;
-    margin: 0 auto;
-}
 
 .company-services-container {
     background-color: var(--violet);
@@ -1090,22 +1077,14 @@ a {
 /* FEES page starts */
 
 .page-header {
-    background-image: url(../img/nasa\ bg.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url('../img/nasa\ bg.jpg'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) no-repeat fixed center;
     background-size: cover;
     height: 120vh;
     position: relative;
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
 }
 
-.page-opacity {
-    font-family: 'Lato', sans-serif;
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 120vh;
-    overflow: hidden;
-    position: relative;
-}
 
 .fiber-icon,
 .phone-icon,
@@ -1130,6 +1109,11 @@ a {
     transition: all 0.3s;
 }
 
+@media screen and (max-width: 400px) {
+    .tab_div {
+        display: none;
+    }
+}
 
 .icon {
     margin-right: 1.071rem;
@@ -1259,10 +1243,6 @@ td {
 /* fees section ends here */
 /* contact section starts here */
 
-.contact-us {
-    max-width: 82.142rem;
-    margin: 0 auto;
-}
 
 .fees-page,
 .fees-opacity {
@@ -1435,13 +1415,8 @@ input[type=submit]:hover {
 /*  */
 /*  */
 /******************* RESPONSIVE DESIGN ************************/
-@media screen and (max-width: 400px) {
-    .tab_div {
-        display: none;
-    }
-}
 
-@media screen and (max-width: 1320px) {
+@media (max-width: 1320px) {
     html {
         font-size: 12px;
     }
@@ -1450,10 +1425,6 @@ input[type=submit]:hover {
 @media screen and (max-width: 1100px) {
     html {
         font-size: 11px;
-    }
-
-    .showcase-text {
-        width: 47%;
     }
 }
 
@@ -1464,6 +1435,7 @@ input[type=submit]:hover {
 
     .navbar,
     .fixed-nav {
+        max-width: 95%;
     }
 }
 
@@ -1535,36 +1507,6 @@ input[type=submit]:hover {
 
     .burger {
         display: block;
-    }
-
-    .showcase-text {
-        width: 55%;
-    }
-
-    .cards {
-        flex-direction: column;
-    }
-
-    .card {
-        height: 30rem;
-        width: 95%;
-        margin-top: 2rem;
-    }
-
-    .card-icon {
-        font-size: 5.2rem;
-        margin-top: 4.5rem;
-    }
-
-    .card-name {
-        font-size: 2.714rem;
-        margin-top: 3.28rem;
-
-    }
-
-    .card-info {
-        margin-top: 3.28rem;
-        font-size: 2.214rem;
     }
 
     .payments-bg,
@@ -1714,17 +1656,6 @@ input[type=submit]:hover {
         font-size: 1.8rem;
     }
 
-    .card-icon {
-        font-size: 5rem;
-    }
-
-    .card-name {
-    }
-
-    .card-info {
-        font-size: 1.8rem;
-    }
-
     .footer-bg {
         height: 54vh;
     }
@@ -1749,12 +1680,11 @@ input[type=submit]:hover {
     .address {
         margin-left: 3rem;
     }
-
-
-
 }
 
-
+.nav-active {
+    transform: translateX(0%);
+}
 
 @keyframes navLinkFade {
     from {
