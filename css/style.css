@@ -12,7 +12,6 @@
     --dark-white: #bbb;
 }
 
-
 html {
     font-size: 14px;
 }
@@ -25,13 +24,12 @@ body {
 .fixed-container {
     max-width: 82.142rem;
     margin: 0 auto;
-
 }
 
 .header {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/selnet-4.png') no-repeat fixed center;
     background-size: cover;
-    height: 100vh;
+    padding: 0 1.1rem 47rem 1.5rem;
 }
 
 .selnet-logo {
@@ -43,7 +41,6 @@ body {
     flex: 1;
     padding-top: 1rem;
 }
-
 
 .navbar {
     display: flex;
@@ -60,7 +57,8 @@ body {
 .navBar {
     position: fixed;
     top: 0;
-    height: 14vh;
+    padding: 0 0 1rem 0;
+
     width: 100%;
     background-color: var(--footer-blue);
 }
@@ -200,7 +198,6 @@ body {
     color: black;
 }
 
-
 .dd-link:before {
     z-index: 0;
     content: "";
@@ -264,6 +261,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
 .login-icon {
@@ -290,6 +288,21 @@ body {
     transition: all 0.4s ease;
 }
 
+.nav-active {
+    transform: translateX(0%);
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-0.357rem, 0.428rem);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-0.357rem, -0.428rem);
+}
 
 .showcase-text {
     font-weight: 400;
@@ -321,6 +334,8 @@ body {
 }
 
 /* header ends */
+/**/
+/**/
 /* our services section starts */
 
 .our-services {
@@ -481,7 +496,7 @@ body {
 /* online-payments starts */
 
 .payments-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/nasa\ bg.jpg') no-repeat fixed center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/nasa-bg.jpg') no-repeat fixed center;
     background-size: cover;
     padding: 6rem 10rem;
     position: relative;
@@ -513,7 +528,6 @@ body {
     margin-top: 1.785rem;
     transition: 0.3s;
 }
-
 
 .emanat {
     background-color: #ebebeb;
@@ -554,7 +568,6 @@ body {
     object-fit: contain;
 }
 
-
 .payment:first-child, .payment:nth-child(4) {
     margin-left: 0;
 }
@@ -562,7 +575,6 @@ body {
 .payment:hover {
     transform: translate(0, -0.9rem);
 }
-
 
 .read-more {
     position: absolute;
@@ -604,18 +616,17 @@ body {
 .footer-bg {
     background-color: var(--footer-blue);
     clip-path: polygon(0% 13%, 15% 0%, 100% 10%, 100% 100%, 0% 100%);
-    height: 50vh;
+    padding: 7rem 8rem;
 }
 
 .bg-light {
     position: relative;
     background-color: rgb(14, 39, 70);
-    height: 50vh;
 }
 
 .footer-container {
     display: flex;
-    padding-top: 6.071rem;
++
 }
 
 .footer-text {
@@ -680,6 +691,7 @@ body {
 .link {
     color: #888;
     margin-top: 1.071rem;
+    text-decoration: none;
 }
 
 .link:hover {
@@ -687,6 +699,8 @@ body {
 }
 
 /* footer ends here */
+/**/
+/**/
 /* Animations */
 
 @keyframes fadeInBottom {
@@ -709,18 +723,29 @@ body {
     }
 }
 
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 /* ________________________________________________________________________________________________________________________ */
 /* ----------------payment page-----------------------------  */
 
 .payment-header {
-    background: url('../img/nasa\ bg.jpg'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) no-repeat fixed center;
+    background: url('../img/nasa-bg.jpg'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) no-repeat fixed center;
     background-size: cover;
-    height: 130vh;
+    padding: 0 1.1rem 6rem 1.5rem;
+
 }
 
-
 .text-below {
-    margin-top: 2.857rem
+    margin-top: 3.57rem
 }
 
 .below-payments {
@@ -740,7 +765,7 @@ body {
 
 .payment-pic {
     width: 45%;
-    height: 40vh;
+    padding: 2rem 2rem 19.5rem 2rem;
     background-image: url('../img/payment-methods/paymentmethods.jpg');
     border-radius: 0.571rem;
     position: relative;
@@ -749,10 +774,10 @@ body {
 .text-body {
     position: absolute;
     left: 42%;
-    top: 38%;
+    top: 42%;
     width: 40%;
     background-color: #0d3857;
-    height: 29vh;
+    padding: 2rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -862,9 +887,9 @@ body {
 }
 
 .about-header {
-    background: url('../img/nasa\ bg.jpg'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) no-repeat fixed center;
+    background: url('../img/nasa-bg.jpg'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) no-repeat fixed center;
     background-size: cover;
-    height: 100vh;
+    padding: 0 1.1rem 56rem 1.5rem;
     position: relative;
 }
 
@@ -878,7 +903,6 @@ body {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.6);
 }
-
 
 .About-heading,
 .our-mission-heading,
@@ -918,7 +942,6 @@ body {
     font-size: 2.6rem;
 }
 
-
 .company-services-container {
     background-color: var(--violet);
 }
@@ -952,7 +975,6 @@ body {
 }
 
 .service-card {
-    transition: all 0.4s;
     color: var(--blue);
     font-size: 3.3rem;
     transition: transform 0.4s ease-in-out;
@@ -978,14 +1000,13 @@ body {
 /* FEES page starts */
 
 .page-header {
-    background: url('../img/nasa\ bg.jpg'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) no-repeat fixed center;
+    background: url('../img/nasa-bg.jpg'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) no-repeat fixed center;
     background-size: cover;
-    height: 120vh;
+    padding: 0 1.1rem 56rem 1.5rem;
     position: relative;
     font-family: 'Lato', sans-serif;
     overflow: hidden;
 }
-
 
 .fiber-icon,
 .phone-icon,
@@ -1022,6 +1043,7 @@ body {
 
 .tab_div {
     position: absolute;
+    left: 0;
     top: 18%;
     width: 100%;
     transform: translateZ(0);
@@ -1040,10 +1062,7 @@ ul.tabs {
 #tab1,
 #tab2,
 #tab3 {
-    padding-top: 10%;
-    padding-bottom: 10%;
-    padding-left: 5%;
-    padding-right: 1%;
+    padding: 10% 1% 10% 5%;
     width: 100%;
 }
 
@@ -1142,12 +1161,12 @@ td {
 }
 
 /* fees section ends here */
+/**/
+/**/
 /* contact section starts here */
-
-
 .fees-page,
 .fees-opacity {
-    height: 170vh;
+    padding: 0 1.1rem 9rem 1.5rem;
 }
 
 .container {
@@ -1378,8 +1397,8 @@ input[type=submit]:hover {
     .navbar-list {
         position: absolute;
         background-color: var(--footer-blue);
-        right: 0px;
-        top: 0px;
+        right: 0;
+        top: 0;
         height: 75vh;
         display: flex;
         align-items: center;
@@ -1403,7 +1422,7 @@ input[type=submit]:hover {
 
     .navbar-list li {
         opacity: 0;
-        margin: 18px 0px;
+        margin: 18px 0;
     }
 
     .burger {
@@ -1458,91 +1477,6 @@ input[type=submit]:hover {
         margin-top: 2rem;
     }
 
-    .alma-store-logo {
-        width: 11.214rem;
-        height: 11.214rem;
-    }
-
-    .araz-logo,
-    .miniso-logo {
-        width: 7.642rem;
-        height: 7.642rem;
-    }
-
-    .azerimed-logo,
-    .naxcivan-logo,
-    .ekol-logo {
-        width: 13.714rem;
-        height: 13.714rem;
-    }
-
-    .azeriqaz-logo,
-    .grant-logo,
-    .ideal-logo,
-    .nortwest-logo,
-    .pasha-logo,
-    .blueplanet-logo,
-    .prive-logo {
-        width: 10.5rem;
-        height: 6.571rem;
-    }
-
-    .socar-logo,
-    .polymart-logo,
-    .papa-logo,
-    .shok-logo {
-        width: 10.857rem;
-        height: 4.785rem;
-    }
-
-    .cofee-logo,
-    .alliance-logo,
-    .akkord-logo,
-    .cinici-logo,
-    .burger-logo,
-    .dominos-logo,
-    .mcdonalds-logo,
-    .evrika-logo,
-    .muxtaroglu-logo {
-        width: 8.157rem;
-        height: 8.157rem;
-    }
-
-    .efendi-logo {
-        width: 11.571rem;
-        height: 9rem;
-    }
-
-    .film-logo,
-    .garant-logo,
-    .global-logo,
-    .qala-logo {
-        width: 10.285rem;
-        height: 8.357rem;
-    }
-
-    .mccan-logo,
-    .selhome-logo,
-    .shuttgart-logo,
-    .technol-logo {
-        width: 8.714rem;
-        height: 8.714rem;
-    }
-
-    .transbroker-logo,
-    .zire-logo,
-    .master-logo {
-        width: 10.642rem;
-        height: 3.285rem;
-    }
-
-    .absheron-logo {
-        width: 10.642rem;
-        height: 9.285rem;
-    }
-
-    /* contact */
-    /* contact ends */
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -1583,29 +1517,3 @@ input[type=submit]:hover {
     }
 }
 
-.nav-active {
-    transform: translateX(0%);
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-0.357rem, 0.428rem);
-}
-
-.toggle .line2 {
-    opacity: 0;
-}
-
-.toggle .line3 {
-    transform: rotate(45deg) translate(-0.357rem, -0.428rem);
-}
