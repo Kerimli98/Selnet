@@ -4,9 +4,8 @@
     <list default="true" id="6515f534-af71-4e91-93b8-6abe3aa27e36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/SELNET.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SELNET.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/nasa bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/nasa-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payments.html" beforeDir="false" afterPath="$PROJECT_DIR$/payments.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +55,8 @@
       <updated>1617442161563</updated>
       <workItem from="1617442162744" duration="6276000" />
       <workItem from="1618410465619" duration="11093000" />
-      <workItem from="1619086428828" duration="3544000" />
+      <workItem from="1619086428828" duration="4810000" />
+      <workItem from="1619091314635" duration="1866000" />
     </task>
     <servers />
   </component>

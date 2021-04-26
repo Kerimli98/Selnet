@@ -432,9 +432,6 @@ body {
 .client-card {
     padding: 0.6rem;
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
     background-color: white;
     border: 0.071rem solid var(--border-color-gray);
@@ -889,7 +886,7 @@ body {
 .about-header {
     background: url('../img/nasa-bg.jpg'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) no-repeat fixed center;
     background-size: cover;
-    padding: 0 1.1rem 56rem 1.5rem;
+    padding: 0 1.1rem 11rem 1.5rem;
     position: relative;
 }
 
@@ -944,46 +941,32 @@ body {
 
 .company-services-container {
     background-color: var(--violet);
+    padding-bottom: 3rem;
 }
 
 .service-cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 2.857rem;
-}
-
-.service-card-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 3.214rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 11vw);
+    grid-gap: 30px;
 }
 
 .service-card {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    border: 0.071rem solid var(--border-color-gray);
-    color: var(--footer-gray);
-    width: 24.857rem;
-    height: 14.285rem;
+    justify-content: center;
+    background-color: white;
     border-radius: 0.5rem;
-    margin-left: 3.214rem;
-}
-
-.service-card {
     color: var(--blue);
     font-size: 3.3rem;
     transition: transform 0.4s ease-in-out;
 }
 
 .service-card:hover {
-    -ms-transform: scale(1.15);
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
     background-color: white;
     color: var(--yellow);
 }
