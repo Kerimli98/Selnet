@@ -1,76 +1,73 @@
-const $navBar = $('<nav class=" navBar">\n' +
-    '<div class="fixed-nav">\n' +
-    ' <a href="index.html" class="logo"><img class="selnet-logo" src="img/selnet.png" alt="selnet-logo"></a>\n' +
+// const $navBar = $('<nav class=" navBar">\n' +
+//     '<div class="fixed-nav">\n' +
+//     ' <a href="index.html" class="logo"><img class="selnet-logo" src="img/selnet.png" alt="selnet-logo"></a>\n' +
+//
+//     '<ul class="navBar-list">\n' +
+//     '  <li class="list-item">  <a href="index.html" class="list-item-link ">Home</a></li>\n' +
+//     '  <li class="list-item">  <a href="about.html" class="list-item-link ">About us</a></li>\n' +
+//     '  <li class="list-item">  <a href="fees.html" class="list-item-link ">Fees</a></li>\n' +
+//     '  <li class="list-item">   <a href="scope.html" class="list-item-link ">Scope</a></li>\n' +
+//     '  <li class="list-item">   <a href="payments.html" class="list-item-link ">Payments</a></li>\n' +
+//     '  <li class="list-item">   <a href="contact.html" class="list-item-link ">Contact</a></li>\n' +
+//
+//     '  <li> <div class="lang-container">\n' +
+//     '       <div class="dropdown">\n' +
+//     '            <div class="dd-a"><span> Language<i class="caret fas fa-caret-down"></i></span></div>\n' +
+//     '            <input type="checkbox">\n' +
+//
+//     '                 <div class="dd-c">\n' +
+//     '                       <ul>\n' +
+//     '<li><a class="dd-link" href="#"><span><img class="flag-img"  src="img/language/flag_az.png" alt="">AZ</span></a></li>\n' +
+//     '<li><a class="dd-link" href="#"><span><img class="flag-img"  src="img/language/flag_en.png" alt="">EN</span></a></li>\n' +
+//     '<li><a class="dd-link" href="#"><span><img class="flag-img"  src="img/language/flag_ru.png" alt="">RU</span></a></li>\n' +
+//     '</ul>\n' +
+//     '</div>\n' +
+//
+//     '</div>\n' +
+//     '</div>\n' +
+//
+//     '</li>\n' +
+//
+//     '<li>\n' +
+//     '<div class="line-cont">\n' +
+//     '<div class="vertical-line">\n' +
+//     '</div>\n' +
+//     '</div>\n' +
+//     '</li>\n' +
+//
+//     '<li>\n' +
+//     '<div class="login-cont">\n' +
+//     '<a class="login-link href="https://customer.selnet.az/">\n' +
+//     '<i class="login-icon fas fa-sign-in-alt"></i>\n' +
+//     '<p class="login">Log in</p>\n' +
+//     '</a>\n' +
+//     '</div>\n' +
+//     '</li>\n' +
+//
+//     '</ul>\n' +
+//     '</div>\n' +
+//     '</div>' +
+//     '</nav>');
+// $navBar.hide();
+//
+// // Why not to have $navbar in DOM from the beginning but with inline style display none?
+// // Also look, it adds the same navbar after each of the script, so as a result you have several navbars
+// // https://ibb.co/nBv1Myz
+// $("script").before($navBar);
+//
+// $(window).scroll(function(event) {
+//     if ($(window).scrollTop() > 44) {
+//         $navBar.fadeIn(600);
+//     } else {
+//         $navBar.fadeOut(600);
+//     }
+// });
+// AOS.init({
+//     duration: 1300
+// });
+//
 
-    '<ul class="navBar-list">\n' +
-    '  <li class="list-item">  <a href="index.html" class="list-item-link ">Home</a></li>\n' +
-    '  <li class="list-item">  <a href="about.html" class="list-item-link ">About us</a></li>\n' +
-    '  <li class="list-item">  <a href="fees.html" class="list-item-link ">Fees</a></li>\n' +
-    '  <li class="list-item">   <a href="scope.html" class="list-item-link ">Scope</a></li>\n' +
-    '  <li class="list-item">   <a href="payments.html" class="list-item-link ">Payments</a></li>\n' +
-    '  <li class="list-item">   <a href="contact.html" class="list-item-link ">Contact</a></li>\n' +
 
-    '  <li> <div class="lang-container">\n' +
-    '       <div class="dropdown">\n' +
-    '            <div class="dd-a"><span> Language<i class="caret fas fa-caret-down"></i></span></div>\n' +
-    '            <input type="checkbox">\n' +
-
-    '                 <div class="dd-c">\n' +
-    '                       <ul>\n' +
-    '<li><a class="dd-link" href="#"><span><img class="flag-img"  src="img/language/flag_az.png" alt="">AZ</span></a></li>\n' +
-    '<li><a class="dd-link" href="#"><span><img class="flag-img"  src="img/language/flag_en.png" alt="">EN</span></a></li>\n' +
-    '<li><a class="dd-link" href="#"><span><img class="flag-img"  src="img/language/flag_ru.png" alt="">RU</span></a></li>\n' +
-    '</ul>\n' +
-    '</div>\n' +
-
-    '</div>\n' +
-    '</div>\n' +
-
-    '</li>\n' +
-
-    '<li>\n' +
-    '<div class="line-cont">\n' +
-    '<div class="vertical-line">\n' +
-    '</div>\n' +
-    '</div>\n' +
-    '</li>\n' +
-
-    '<li>\n' +
-    '<div class="login-cont">\n' +
-    '<a class="login-link href="https://customer.selnet.az/">\n' +
-    '<i class="login-icon fas fa-sign-in-alt"></i>\n' +
-    '<p class="login">Log in</p>\n' +
-    '</a>\n' +
-    '</div>\n' +
-    '</li>\n' +
-
-    '</ul>\n' +
-    '</div>\n' +
-    '</div>' +
-    '</nav>');
-$navBar.hide();
-
-// Why not to have $navbar in DOM from the beginning but with inline style display none?
-// Also look, it adds the same navbar after each of the script, so as a result you have several navbars
-// https://ibb.co/nBv1Myz
-$("script").before($navBar);
-
-$(window).scroll(function(event) {
-    if ($(window).scrollTop() > 44) {
-        $navBar.fadeIn(600);
-    } else {
-        $navBar.fadeOut(600);
-    }
-});
-AOS.init({
-    duration: 1300
-});
-
-
-$(document).ready(function() {
-    $(".clients-row").slice(0, 3).show();
-    $(".load-btn").on("click", function(e) {
-        e.preventDefault();
         // This doesn't have practical usage since all the is already in DOM,
         // for correct usage of load more, have a look to json, if you don't remember
         // https://beginnersbook.com/2015/04/json-tutorial/
@@ -95,13 +92,7 @@ $(document).ready(function() {
 
         // And then you will append to your container
 
-        $(".clients-row:hidden").slice(0, 1).slideDown();
-        if ($(".clients-row:hidden").length == 0) {
-            $(".load-btn").text("No Content").addClass("noContent");
-        }
-    });
 
-})
 
 
 var a = 0;
@@ -189,26 +180,26 @@ $(document).ready(function() {
 
 
 
-const navSlide = () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.navbar-list');
-    const navLinks = document.querySelectorAll('.navbar-list li');
-
-    burger.addEventListener('click', () => {
-
-        nav.classList.toggle('nav-active');
-
-        navLinks.forEach((link, index) => {
-            if (link.style.animation) {
-                link.style.animation = '';
-            } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 10 + 0.3}s`;
-
-            }
-        });
-        burger.classList.toggle('toggle');
-    });
-
-};
-
-navSlide();
+// const navSlide = () => {
+//     const burger = document.querySelector('.burger');
+//     const nav = document.querySelector('.navbar-list');
+//     const navLinks = document.querySelectorAll('.navbar-list li');
+//
+//     burger.addEventListener('click', () => {
+//
+//         nav.classList.toggle('nav-active');
+//
+//         navLinks.forEach((link, index) => {
+//             if (link.style.animation) {
+//                 link.style.animation = '';
+//             } else {
+//                 link.style.animation = `navLinkFade 0.5s ease forwards ${index / 10 + 0.3}s`;
+//
+//             }
+//         });
+//         burger.classList.toggle('toggle');
+//     });
+//
+// };
+//
+// navSlide();
