@@ -493,9 +493,13 @@ body {
 
 .payment-methods {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(2, 8vw);
-    grid-gap: 1.071rem;
+    grid-template-columns: repeat(3, 1fr);
+    /*try not to use vw and vh*/
+    /*grid-template-rows: repeat(2, 8vw);*/
+    /*this replaces mragin left of .payment*/
+    grid-column-gap: 2.142rem;
+    /*this margin top*/
+    grid-row-gap: 1.785rem;
 }
 
 .payment {
@@ -506,41 +510,41 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-left: 2.142rem;
-    margin-top: 1.785rem;
+    /*margin-left: 2.142rem;*/
+    /*margin-top: 1.785rem;*/
     transition: 0.3s;
 }
 
 .emanat {
     background-color: #ebebeb;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    /*grid-column-start: 1;*/
+    /*grid-column-end: 3;*/
 }
 
 .hesab {
     background-color: #00a9e4;
-    grid-column-start: 3;
-    grid-column-end: 5;
+    /*grid-column-start: 3;*/
+    /*grid-column-end: 5;*/
 }
 
 .million {
     background-color: #d1010f;
-    grid-column-start: 5;
-    grid-column-end: 7;
+    /*grid-column-start: 5;*/
+    /*grid-column-end: 7;*/
 }
 
 .IBA {
     background-color: #4b99de;
-    grid-column-start: 3;
-    grid-column-end: 5;
+    /*grid-column-start: 3;*/
+    /*grid-column-end: 5;*/
     padding: 1.7rem;
 }
 
 .birbank {
     padding: 1.5rem;
     background-color: #b30838;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    /*grid-column-start: 1;*/
+    /*grid-column-end: 3;*/
 }
 
 
@@ -550,9 +554,9 @@ body {
     object-fit: contain;
 }
 
-.payment:first-child, .payment:nth-child(4) {
-    margin-left: 0;
-}
+/*.payment:first-child, .payment:nth-child(4) {*/
+/*    margin-left: 0;*/
+/*}*/
 
 .payment:hover {
     transform: translate(0, -0.9rem);
@@ -1366,6 +1370,10 @@ input[type=submit]:hover {
     .main-text {
         font-size: 2.5rem;
     }
+
+    .payment-methods {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 380px) {
@@ -1442,6 +1450,31 @@ input[type=submit]:hover {
 
     .card {
         width: 80%;
+    }
+
+    /*Media css should be a different file*/
+    .payment-methods {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .payment {
+        /*I know thagt I have written it's better not to use height property, but this can be an exception, because you know that it will only have a single photo inside,*/
+        /*which has object fit contain, full width and heighr, so you are sure that there won't be an overflow of content*/
+
+        /*You can try to comment this proprty in order to see the difference*/
+        height: 124px;
+    }
+
+    /* It's also better not to use complex selectros like .class .class , here I have written this to target read more inside of payment, because I don't know if you have other elements
+     with class of .read-more, so if this is only place where  .read-more class is used, then erase .payment-bg and leave only .read-more */
+    .payments-bg .read-more {
+        position: static;
+    }
+
+    .payment-read-more-link {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
     }
 }
 
