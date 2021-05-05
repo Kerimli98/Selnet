@@ -1,0 +1,184 @@
+/******************* RESPONSIVE DESIGN ************************/
+
+@media (max-width: 1230px) {
+    html {
+        font-size: 12px;
+    }
+
+    .content {
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 1100px) {
+    html {
+        font-size: 11px;
+    }
+
+    .content {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    html {
+        font-size: 11px;
+    }
+
+    .content {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 868px) {
+    html {
+        font-size: 10px;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    body.disabled {
+        overflow: hidden;
+    }
+
+    .icon.hide {
+        display: none;
+    }
+
+    .navbar .menu-list {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        left: -100%;
+        top: 0;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        background: var(--footer-color);
+    }
+
+    .navbar.show .menu-list {
+        left: 0;
+    }
+
+    .navbar .menu-list li {
+        margin-top: 45px;
+    }
+
+    .navbar .menu-list li a {
+        font-size: 23px;
+        margin-left: -100%;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .navbar.show .menu-list li a {
+        margin-left: 0;
+    }
+
+    .main-text {
+        font-size: 2.5rem;
+    }
+
+    .payment-methods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 380px) {
+    .navbar .logo a {
+        font-size: 27px;
+    }
+
+    .showcase-text {
+        width: 60%;
+    }
+
+    .main-text {
+        font-size: 2rem;
+    }
+
+    .small-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .tab_div {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .footer-right > * {
+        flex: 1;
+    }
+
+    .footer-left {
+        flex: 1 0;
+    }
+
+    .footer-right {
+        flex: 2 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 11px;
+    }
+
+    .fixed-container {
+        max-width: 92%;
+    }
+
+    .showcase-text {
+        width: 55%;
+    }
+
+    .card {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .fixed-container {
+        width: 100%;
+    }
+
+    .heading-services {
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .payment-methods {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .payment {
+        height: 124px;
+    }
+
+    .read-more {
+        position: static;
+    }
+
+    .payment-read-more-link {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+}
+
