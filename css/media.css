@@ -18,6 +18,7 @@
     .content {
         padding: 0 40px;
     }
+
 }
 
 @media (max-width: 900px) {
@@ -85,8 +86,66 @@
     .payment-methods {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
+    .counter-big-counter {
+        align-items: center;
+    }
+
+    .counter-container {
+        margin-bottom: 4rem;
+    }
+
+    .counter-values {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .counter-value {
+        font-size: 5rem;
+    }
+
+    .experience, .users, .districts {
+        font-size: 1.7rem;
+    }
+
+    .user, .years, .regions {
+        font-size: 3rem;
+    }
+
+    .years {
+        left: 26%;
+    }
+
+    .user {
+        right: 30%;
+    }
+
+    .regions {
+        left: 32%;
+    }
+
+    .service-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-card-name {
+        font-size: 1.5rem;
+    }
+
+    #contact-section .contact-form {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    #contact-section .submit {
+        width: 60%;
+    }
+
+    #contact-section .contact-container p {
+        font-size: 1.4rem;
+    }
+}
 @media (max-width: 380px) {
     .navbar .logo a {
         font-size: 27px;
@@ -147,6 +206,8 @@
     .card {
         width: 40%;
     }
+
+
 }
 
 @media screen and (max-width: 620px) {
@@ -179,6 +240,120 @@
         display: flex;
         justify-content: center;
         margin-top: 3rem;
+    }
+
+    .counter-heading {
+        font-size: 3.3rem;
+    }
+
+    .counter-value {
+        font-size: 4rem;
+    }
+
+    .experience, .users, .districts {
+        font-size: 1.4rem;
+    }
+
+    .user, .years, .regions {
+        font-size: 2.2rem;
+    }
+
+    .user {
+        right: 38%;
+    }
+
+    .regions {
+        left: 25%;
+    }
+
+    .years {
+        left: 20%;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .how-to {
+        padding: 0 0 40px;
+    }
+
+    .how-to .inner {
+        padding: 30px;
+    }
+
+    .how-to h3 {
+        padding: 0 0 24px;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .how-to {
+        padding: 0 0 30px;
+    }
+
+    .how-to > div {
+        display: block;
+    }
+
+    .how-to .image {
+        width: 100%;
+    }
+
+    .how-to .image img {
+        border-radius: 4px 4px 0 0;
+    }
+
+    .how-to .inner {
+        width: 100%;
+        padding: 20px 0px 25px 0px;
+        margin: 0;
+        border-radius: 0 0 4px 4px;
+    }
+
+    .how-to h3 {
+        padding: 0 20px 20px;
+        font-size: 27px;
+    }
+
+    .how-to p {
+        padding: 0 20px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 240px) and (max-width: 479px) {
+    .how-to {
+        padding: 0 0 30px;
+    }
+
+    .how-to > div {
+        display: block;
+    }
+
+    .how-to .image {
+        width: 100%;
+    }
+
+    .how-to .image img {
+        border-radius: 4px 4px 0 0;
+    }
+
+    .how-to .inner {
+        width: 100%;
+        padding: 20px 0px 25px 0px;
+        margin: 0;
+        border-radius: 0 0 4px 4px;
+    }
+
+    .how-to h3 {
+        padding: 0 20px 10px;
+        font-size: 21px;
+    }
+
+    .how-to p {
+        padding: 0 20px 20px;
+        font-size: 14px;
     }
 }
 

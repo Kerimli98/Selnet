@@ -301,12 +301,10 @@ body {
 
 .main-text {
     font-size: 3rem;
-    animation: fadeInBottom 1.5s ease-in-out;
 }
 
 .small-text {
     font-weight: 500;
-    animation: fadeInBottom2 1.6s ease-in-out;
     line-height: 1.5;
 }
 
@@ -416,7 +414,6 @@ body {
     box-sizing: border-box;
     overflow: hidden;
     background-color: white;
-    /*border: 0.071rem solid var(--border-color-gray);*/
 }
 
 .card-logo {
@@ -424,50 +421,6 @@ body {
     height: 100%;
     object-fit: contain;
 }
-
-/*.client-card img {*/
-/*    transition: transform 0.8s ease*/
-/*}*/
-
-/*.client-card:hover .card-logo {*/
-/*    -ms-transform: scale(1.08);*/
-/*    -webkit-transform: scale(1.08);*/
-/*    transform: scale(1.08);*/
-/*}*/
-
-/*.load-btn {*/
-/*    background-color: var(--yellow);*/
-/*    color: white;*/
-/*    margin-top: 3.571rem;*/
-/*    margin-bottom: 3.571rem;*/
-/*    font-size: 1.285rem;*/
-/*    cursor: pointer;*/
-/*    padding: 1.571rem 4.285rem;*/
-/*    text-transform: uppercase;*/
-/*    letter-spacing: 0.107rem;*/
-/*    font-weight: 700;*/
-/*    outline: none;*/
-/*    -webkit-transition: all 0.4s;*/
-/*    -moz-transition: all 0.4s;*/
-/*    transition: all 0.4s;*/
-/*    border-radius: 3.571rem;*/
-/*    border: 0.214rem solid #fff;*/
-/*    overflow: hidden;*/
-/*}*/
-
-/*.load-icon {*/
-/*    color: white;*/
-/*}*/
-
-/*.load-btn:hover {*/
-/*    background-color: var(--blue);*/
-/*}*/
-
-/*.noContent {*/
-/*    color: #000 !important;*/
-/*    background-color: transparent !important;*/
-/*    pointer-events: none;*/
-/*}*/
 
 /* our clients ends here */
 /**/
@@ -666,34 +619,13 @@ h2 {
 
 /* footer ends here */
 /**/
-/**/
-/* Animations */
-@keyframes fadeInBottom {
-    from {
-        opacity: 0;
-        transform: translateY(35%);
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInBottom2 {
-    from {
-        opacity: 0;
-        transform: translateY(55%);
-    }
-    to {
-        opacity: 1;
-    }
-}
 
 /* ________________________________________________________________________________________________________________________ */
 /* ----------------payment page-----------------------------  */
 .payment-header {
     background: url('../img/nasa-bg.jpg'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) no-repeat fixed center;
     background-size: cover;
-    padding: 0 0 6rem 0;
+    padding: 0 0 10rem 0;
 
 }
 
@@ -705,43 +637,70 @@ h2 {
     padding-top: 4.285rem;
 }
 
-.payment-pic-container {
-    margin-top: 2.857rem;
-}
-
-.how-to-pay {
-    color: white;
-    font-size: 2.8rem;
-    font-weight: 600;
-    letter-spacing: 0.085rem;
-}
-
-.payment-pic {
-    width: 45%;
-    padding: 2rem 2rem 19.5rem 2rem;
-    background-image: url('../img/payment-methods/paymentmethods.jpg');
-    border-radius: 0.571rem;
+.how-to {
+    padding: 0 0 60px;
     position: relative;
 }
 
-.text-body {
+.how-to::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50%;
     position: absolute;
-    left: 42%;
-    top: 42%;
-    width: 40%;
-    background-color: #0d3857;
-    padding: 2rem 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
 }
 
-.payment-text {
-    color: white;
-    font-size: 1.65rem;
-    width: 80%;
-    line-height: 1.4;
+.how-to > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: center;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
+
+.image {
+    width: 50%;
+    position: relative;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.inner {
+    width: 44%;
+    margin: 0 0 0 -15%;
+    padding: 33px 45px;
+    color: #fff;
+    background: #04287d;
+    position: relative;
+}
+
+.inner h3 {
+    padding: 0 0 20px;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.4;
+    letter-spacing: 0.01rem;
+    color: #fff;
+}
+
+.inner p {
+    font-size: 20px;
+    line-height: 1.56;
+    color: #fff;
+}
+
 
 /*  payment page ends here*/
 /* _____________________________________________________________________________________________ */
@@ -767,6 +726,7 @@ h2 {
 .counter-values {
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     display: flex;
     margin-top: 3.214rem;
     margin-bottom: 2.5rem;
@@ -784,7 +744,7 @@ h2 {
     color: var(--yellow);
     font-size: 2.285rem;
     font-weight: 600;
-    left: 22%;
+    left: 23%;
     top: 15.5%;
 }
 
@@ -793,7 +753,7 @@ h2 {
     color: var(--yellow);
     font-size: 2.285rem;
     font-weight: 600;
-    left: 15%;
+    left: 16%;
     top: 15.5%;
 }
 
@@ -841,8 +801,7 @@ h2 {
 .about-header {
     background: url('../img/nasa-bg.jpg'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) no-repeat fixed center;
     background-size: cover;
-    padding: 0 0 11rem 0;
-    position: relative;
+    padding: 10rem 0 10rem 0;
 }
 
 .about-us-container {
@@ -901,11 +860,13 @@ h2 {
 .service-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 11vw);
-    grid-gap: 2.142rem;
+    grid-row-gap: 2rem;
 }
 
 .service-card {
+    width: 84%;
+    padding: 2rem;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1095,29 +1056,107 @@ td {
 /**/
 /**/
 /* contact section starts here */
-.fees-page,
-.fees-opacity {
-    padding: 0 0 25rem 0;
+.contact-page {
+    background: url('../img/nasa-bg.jpg'), linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)) no-repeat fixed center;
+    background-size: cover;
+    padding: 10rem 0 25rem 0;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#contact-section {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 2%;
 }
 
-.contact-with-us {
-    margin-top: 11.571rem;
-    color: white;
-    font-size: 2.857rem;
-    margin-bottom: 1.785rem;
+#contact-section .contact-container h2 {
+    font-size: 3.1rem;
+    color: rgb(238, 235, 235);
+    letter-spacing: 0.142rem;
+    padding-bottom: 2%;
 }
 
-.contact-subtext {
+#contact-section .contact-container p {
+    width: 70%;
+    padding-bottom: 4%;
+    font-size: 1.9rem;
+    color: #fff;
+    letter-spacing: 0.214rem;
+}
+
+.contact-info div{
+    padding-bottom: 2rem;
+}
+
+.contact-form i.fa {
+    font-size: 1.571rem;
+    padding: 3%;
+    background: none;
+    margin: 2%;
+    cursor: pointer;
+    border-radius: 80%;
+    border: 0.142rem solid rgb(190, 190, 190);
+    color: rgb(190, 190, 190);
+}
+
+.contact-form i.fa:hover {
+    cursor: pointer;
+    border: 0.142rem solid #fff;
+    color: #fff;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+
+.form-info {
     font-size: 1.4rem;
+    font-style: italic;
+    color: #fff;
+    letter-spacing: 0.142rem;
+}
+
+input, textarea {
+    padding:0.714rem;
+    margin: 0.714rem;
+    width: 70%;
+    background-color: rgba(136, 133, 133, 0.5);
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
     color: white;
-    letter-spacing: 0.092rem;
-    margin-bottom: 2.857rem;
+}
+
+.submit {
+    width: 40%;
+    background: none;
+    padding: 0.284rem;
+    outline: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 0.142rem;
+    height: 2.857rem;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 3%;
+    margin-top: 2%;
+    border: 0.142rem solid rgb(190, 190, 190);
+    color: rgb(190, 190, 190);
+}
+
+.submit:hover {
+    border: 0.071rem solid #fff;
+    color: #fff;
+    cursor: pointer;
 }
 
 #map {
@@ -1129,139 +1168,6 @@ td {
     margin-top: 3.571rem;
 }
 
-.form-container {
-    border-radius: 0.5rem;
-    background-color: rgb(236, 232, 232);
-    border: none;
-    padding: 1.785rem;
-    width: 30.714rem;
-    height: 39.285rem;
-    margin-right: 12.142rem;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-input::placeholder,
-textarea::placeholder {
-    font-size: 1.27rem;
-}
-
-label {
-    color: var(--footer-gray);
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
-    letter-spacing: 0.107rem;
-    word-spacing: 0.1rem;
-    font-size: 1.42rem;
-    margin-left: 0.714rem;
-}
-
-.email-phone {
-    display: flex;
-    justify-content: space-between;
-}
-
-.email-cont {
-    display: flex;
-    flex-direction: column;
-    width: 14.28rem;
-}
-
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 0.857rem;
-    background: none;
-    box-sizing: border-box;
-    margin-top: 0.428rem;
-    margin-bottom: 1.428rem;
-    resize: vertical;
-    border-width: 0 0 0.071rem 0;
-    border-color: lightgray;
-}
-
-input,
-select,
-textarea:focus {
-    outline: none;
-}
-
-.submit-btn {
-    font-size: 1.5rem;
-}
-
-input[type=submit] {
-    background-color: #105688;
-    color: white;
-    padding: 0.857rem 1.428rem;
-    border: none;
-    border-radius: 0.285rem;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #0d3857;
-}
-
-.contact-card {
-    display: flex;
-    align-items: center;
-    margin-top: 1.785rem;
-}
-
-.contact-nums {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-email,
-.contact-address-text,
-.contact-num1,
-.contact-num2 {
-    font-size: 1.571rem;
-    color: #bbb;
-    word-spacing: 0.142rem;
-    line-height: 1.2;
-    letter-spacing: 0.1rem;
-}
-
-.contact-num2:hover {
-    color: #fff;
-}
-
-.contact-num1:hover {
-    color: #fff;
-}
-
-.contact-email:hover {
-    color: #fff;
-}
-
-.contact-address-text:hover {
-    color: #fff;
-}
-
-.contact-icon {
-    color: #bbb;
-    font-size: 3rem;
-    margin-right: 3.928rem;
-}
-
-.contact-card:hover i {
-    color: white;
-}
-
-.horizontal-line {
-    width: 28.57rem;
-    height: 0.142rem;
-    background-color: #bbb;
-    margin-top: 3.571rem;
-}
 
 /* contact section ends here */
 /*  */
