@@ -501,6 +501,9 @@ body {
     font-size: 1.285rem;
     background: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+align-items: center;
     padding: 1.428rem 4.285rem;
     text-transform: uppercase;
     letter-spacing: 0.071rem;

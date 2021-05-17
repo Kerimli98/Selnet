@@ -64,21 +64,6 @@ $(window).scroll(function () {
 });
 
 
-// Initialize and add the map
-function initMap() {
-    const selnet = {lat: 40.450213033764776, lng: 49.749572145093396};
-    // The map, centered at Selnet
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 4,
-        center: selnet
-    });
-    // The marker, positioned at Selnet
-    const marker = new google.maps.Marker({
-        position: selnet,
-        map: map,
-    });
-}
-
 $(document).ready(function () {
 
     $("#tab1_content").show();

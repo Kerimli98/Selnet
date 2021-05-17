@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="6515f534-af71-4e91-93b8-6abe3aa27e36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/media.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/media.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fees.html" beforeDir="false" afterPath="$PROJECT_DIR$/fees.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payments.html" beforeDir="false" afterPath="$PROJECT_DIR$/payments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scope.html" beforeDir="false" afterPath="$PROJECT_DIR$/scope.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +78,7 @@
       <workItem from="1619955553275" duration="32244000" />
       <workItem from="1620746886527" duration="1633000" />
       <workItem from="1620838903909" duration="597000" />
-      <workItem from="1620909383947" duration="21540000" />
+      <workItem from="1620909383947" duration="25781000" />
     </task>
     <servers />
   </component>
@@ -105,5 +110,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="463" y="10" width="609" height="804" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1617455972481" />
+    <state x="431" y="145" key="search.everywhere.popup" timestamp="1621248884683">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1621248884683" />
   </component>
 </project>
