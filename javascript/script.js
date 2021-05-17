@@ -2,38 +2,9 @@ AOS.init({
     duration: 1400
 });
 
-
-// This doesn't have practical usage since all the is already in DOM,
-// for correct usage of load more, have a look to json, if you don't remember
-// https://beginnersbook.com/2015/04/json-tutorial/
-// and also go for ajax requests in jquery
-// https://www.w3schools.com/jquery/jquery_ajax_get_post.asp
-// backend should hive you paginated content with API, you will send get request for example to selnet.az/partners
-// and in return get the json with the name of partner, and logo image
-// I will give an example response
-
-// const exampleResponse = '[{"partnerTitle":"McDonalds","img":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-girl-cat-names-1606245046.jpg?crop=0.668xw:1.00xh;0.126xw,0&resize=640:*"},{"partnerTitle":"Apple","img":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-girl-cat-names-1606245046.jpg?crop=0.668xw:1.00xh;0.126xw,0&resize=640:*"},{"partnerTitle":"Facebook","img":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-girl-cat-names-1606245046.jpg?crop=0.668xw:1.00xh;0.126xw,0&resize=640:*"}]';
-//
-// const parsedJson = JSON.parse(exampleResponse);
-// console.log(parsedJson);
-
-// And then you will go like
-// let content = '';
-// parsedJson.forEach( (partner) => {
-//     content += `<div class="client-card">
-//                         <img class="card-logo shok-logo" src="${partner.img}" alt="${partner.partnerTitle}">
-//                     </div>`
-// })
-
-// And then you will append to your container
-
-
 var a = 0;
 $(window).scroll(function () {
 
-    // You shouyld check whether counter is present in dom, because if it's not it gives an error
-    // Please see
-    // https://ibb.co/5BjKBQb
     var oTop = $('#counter').offset().top - window.innerHeight;
     if (a == 0 && $(window).scrollTop() > oTop) {
         $('.counter-value').each(function () {
