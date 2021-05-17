@@ -8,6 +8,7 @@
     .content {
         padding: 0 60px;
     }
+
 }
 
 @media (max-width: 1100px) {
@@ -17,6 +18,103 @@
 
     .content {
         padding: 0 40px;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 11px;
+    }
+
+    .fixed-container {
+        max-width: 92%;
+    }
+
+    .showcase-text {
+        width: 55%;
+    }
+
+    .card {
+        width: 40%;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .fee-icons {
+        margin: 0;
+        font-size: 2.4rem;
+    }
+
+    #tab1, #tab2, #tab3 {
+        width: 43%;
+        text-align: center;
+        padding: 20% 11% 20% 6%;
+    }
+
+    #tab1_content, #tab2_content, #tab3_content {
+        width: 66%;
+    }
+
+}
+
+@media (max-width: 770px) {
+    html {
+        font-size: 11px;
+    }
+
+    .page-header {
+        position: relative;
+        padding: 0 0 75rem 0;
+    }
+
+    .tab_div {
+        position: absolute;
+        left: -7%;
+        top:14%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tabs_menu {
+        width: 28%;
+        position: static;
+        margin-bottom: 22%;
+        margin-left: 5%;
+    }
+
+    #tab1,
+    #tab2,
+    #tab3 {
+        padding: 8% 9% 8% 9%;
+        width: 100%;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #tab1_content, #tab2_content, #tab3_content {
+        position: absolute;
+        top: 40%;
+        left: 15%;
+        width: 80%;
+    }
+}
+
+@media (max-width: 520px) {
+    .page-header {
+        padding: 0 0 90rem 0;
+    }
+    #tab1_content, #tab2_content, #tab3_content {
+        left: 11%;
+        width: 82%;
     }
 
 }
@@ -145,7 +243,9 @@
     #contact-section .contact-container p {
         font-size: 1.4rem;
     }
+
 }
+
 @media (max-width: 380px) {
     .navbar .logo a {
         font-size: 27px;
@@ -164,11 +264,6 @@
     }
 }
 
-@media screen and (max-width: 400px) {
-    .tab_div {
-        display: none;
-    }
-}
 
 @media screen and (min-width: 600px) {
     .footer-right > * {
@@ -188,26 +283,6 @@
     .footer {
         padding: 15px;
     }
-}
-
-@media screen and (max-width: 1000px) {
-    html {
-        font-size: 11px;
-    }
-
-    .fixed-container {
-        max-width: 92%;
-    }
-
-    .showcase-text {
-        width: 55%;
-    }
-
-    .card {
-        width: 40%;
-    }
-
-
 }
 
 @media screen and (max-width: 620px) {
@@ -285,6 +360,7 @@
         padding: 0 0 24px;
         font-size: 24px;
     }
+
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
@@ -320,6 +396,8 @@
         padding: 0 20px 20px;
         font-size: 16px;
     }
+
+
 }
 
 @media (min-width: 240px) and (max-width: 479px) {
@@ -355,5 +433,7 @@
         padding: 0 20px 20px;
         font-size: 14px;
     }
+
+
 }
 

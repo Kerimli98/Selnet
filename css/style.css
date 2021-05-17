@@ -899,7 +899,7 @@ h2 {
 .page-header {
     background: url('../img/nasa-bg.jpg'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) no-repeat fixed center;
     background-size: cover;
-    padding: 0 0 62rem 0;
+    padding: 0 0 63rem 0;
     position: relative;
     font-family: 'Lato', sans-serif;
     overflow: hidden;
@@ -928,6 +928,10 @@ h2 {
     transition: all 0.3s;
 }
 
+.fee-icons {
+    margin-right: 1.071rem;
+
+}
 
 .icon {
     margin-right: 1.071rem;
@@ -942,7 +946,7 @@ h2 {
 }
 
 .tabs_menu {
-    width: 17%;
+    width: 18%;
     position: absolute;
     left: 0;
 }
@@ -961,7 +965,7 @@ ul.tabs {
 ul.tabs li {
     list-style-type: none;
     border-right: 0.142rem solid var(--yellow);
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     color: white;
 }
 
@@ -1087,7 +1091,7 @@ td {
     letter-spacing: 0.214rem;
 }
 
-.contact-info div{
+.contact-info div {
     padding-bottom: 2rem;
 }
 
@@ -1122,7 +1126,7 @@ td {
 }
 
 input, textarea {
-    padding:0.714rem;
+    padding: 0.714rem;
     margin: 0.714rem;
     width: 70%;
     background-color: rgba(136, 133, 133, 0.5);
