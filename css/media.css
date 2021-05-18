@@ -259,6 +259,20 @@
         text-align: center;
     }
 
+    .contact-info {
+        max-width: 50%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-info div {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
     #contact-section .submit {
         width: 60%;
     }
@@ -305,6 +319,10 @@
 @media (max-width: 600px) {
     .footer {
         padding: 15px;
+    }
+
+    .contact-info {
+        max-width: 100%;
     }
 }
 
