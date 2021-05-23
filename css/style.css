@@ -1100,7 +1100,9 @@ td {
 .contact-info div {
     padding-bottom: 2rem;
 }
-
+.phone-numbers span:nth-child(2){
+    margin-left: 15px;
+}
 .contact-form i.fa {
     font-size: 1.571rem;
     padding: 3%;
