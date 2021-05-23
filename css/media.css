@@ -182,10 +182,12 @@
     .navbar.show .menu-list-li a {
         margin-left: 0;
     }
-    .navbar.show .lang-container{
+
+    .navbar.show .lang-container {
         margin-left: 0;
 
     }
+
     .dd-c {
         width: 32%;
         top: 1.8rem;
@@ -306,6 +308,13 @@
     .footer {
         padding: 15px;
     }
+}
+
+@media (max-width: 990px) {
+.footer-container{
+    max-width: 90%;
+
+}
 }
 
 @media screen and (max-width: 620px) {
