@@ -493,9 +493,11 @@ body {
 .payment:hover {
     transform: translate(0, -0.9rem);
 }
-.payment-read-more-link{
+
+.payment-read-more-link {
     padding-bottom: 2rem;
 }
+
 .read-more {
     position: absolute;
     color: white;
@@ -611,9 +613,22 @@ h2 {
 }
 
 .footer-bottom {
-    text-align: center;
-    color: #999;
+    text-align: right;
     padding-top: 3.571rem;
+}
+
+.footer-bottom a {
+    color: #999;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+.acc-link{
+    text-underline-position: under;
+    text-decoration: underline;
+
+}
+.acc-link:hover{
+    color: white;
 }
 
 .footer-left p {
@@ -730,7 +745,7 @@ h2 {
 }
 
 .counter-values {
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     display: flex;
@@ -763,15 +778,6 @@ h2 {
     top: 15.5%;
 }
 
-.user {
-    position: absolute;
-    color: var(--yellow);
-    font-size: 2.285rem;
-    font-weight: 600;
-    right: 38%;
-    top: 15.5%;
-}
-
 .container-cc {
     display: flex;
     justify-content: center;
@@ -779,6 +785,7 @@ h2 {
 }
 
 .counter-container {
+    margin-right: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -787,8 +794,7 @@ h2 {
 }
 
 .experience,
-.districts,
-.users {
+.districts {
     font-size: 1.142rem;
     font-weight: 600;
     word-spacing: 0.142rem;
@@ -800,9 +806,6 @@ h2 {
     margin-right: 1.928rem;
 }
 
-.users {
-    margin-right: 4.071rem;
-}
 
 .about-header {
     background: url('../img/nasa-bg.jpg'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) no-repeat fixed center;
@@ -1100,9 +1103,11 @@ td {
 .contact-info div {
     padding-bottom: 2rem;
 }
-.phone-numbers span:nth-child(2){
+
+.phone-numbers span:nth-child(2) {
     margin-left: 15px;
 }
+
 .contact-form i.fa {
     font-size: 1.571rem;
     padding: 3%;
