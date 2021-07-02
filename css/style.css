@@ -619,7 +619,7 @@ h2 {
 
 .footer-bottom a {
     color: #999;
-    word-spacing: 3px;
+    word-spacing: 1px;
     letter-spacing: 1px;
 }
 .acc-link{
@@ -1194,10 +1194,13 @@ input::placeholder, textarea::placeholder {
 
 
 #scope {
-    margin-top: 100px;
-    /*background-color: teal;*/
-    height: 500px;
-    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    height: 700px;
+    border: 0;
+    width: 100%;
+    max-width: 1150px;
 }
 
 
