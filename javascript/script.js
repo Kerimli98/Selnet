@@ -912,7 +912,7 @@ $(document).ready(function () {
         },
         {
             "latitude": 41.4591168,
-            "lat": 48.80206260000001
+            "longtitude": 48.80206260000001
         }
     ]
     ViewCustInGoogleMap(data);
